@@ -9,6 +9,8 @@
 <meta property="og:description" content="I turn complex journeys into clear, human words.">
 <meta property="og:image" content="images/og-image.jpg">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+
 <meta name="theme-color" content="#1A2150">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,6 +64,27 @@ p{text-wrap:pretty}
 .navlink::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:2px;background:#8B7FC4;transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 .navlink:hover{color:#3E4A9A}
 .navlink:hover::after{transform:scaleX(1);transform-origin:left}
+
+/* language switcher */
+@keyframes menuIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.hdr-actions{display:flex;align-items:center;gap:10px}
+.langsw{position:relative}
+.langsw-btn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 12px;border-radius:999px;border:0;background:transparent;color:#2A2F4F;font-family:'Lexend',sans-serif;font-weight:500;font-size:14px;cursor:pointer;box-shadow:inset 0 0 0 1.5px rgba(62,74,154,0.22);transition:box-shadow .25s ease,color .25s ease,background .25s ease}
+.langsw-btn:hover,.langsw-btn[aria-expanded="true"]{color:#1A2150;background:#F5F6FC;box-shadow:inset 0 0 0 1.5px #3E4A9A}
+.langsw-btn .chev{transition:transform .25s ease}
+.langsw-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.langsw-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:40;min-width:220px;margin:0;padding:6px;list-style:none;background:#FFFFFF;border-radius:16px;box-shadow:0 0 0 1px rgba(26,33,80,0.08),0 24px 48px -20px rgba(26,33,80,0.4);animation:menuIn .2s ease both}
+.langsw-menu[hidden]{display:none}
+.langsw-menu a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:0 14px;border-radius:10px;text-decoration:none;color:#2A2F4F;font-size:15px;font-weight:500;transition:background .2s ease,color .2s ease}
+.langsw-menu a:hover{background:#F1F2FA;color:#1A2150}
+.langsw-menu a[aria-current="page"]{color:#3E4A9A;font-weight:600}
+.langsw-menu .chk{visibility:hidden;flex-shrink:0}
+.langsw-menu a[aria-current="page"] .chk{visibility:visible}
+.cta-ic{display:none}
+.foot-lang{display:flex;flex-wrap:wrap;gap:4px 16px}
+.foot-lang a{color:#DCD6F2;min-height:44px;display:inline-flex;align-items:center;text-decoration:none;background-image:linear-gradient(#8B7FC4,#8B7FC4);background-size:0% 1.5px;background-repeat:no-repeat;background-position:0 75%;transition:background-size .35s ease,color .25s ease}
+.foot-lang a:hover{color:#FFFFFF;background-size:100% 1.5px}
+.foot-lang a[aria-current="page"]{color:#FFFFFF;font-weight:600;background-size:100% 1.5px}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font-family:'Lexend',sans-serif;font-weight:500;font-size:15px;text-decoration:none;white-space:nowrap;transition:transform .25s ease,background .25s ease,color .25s ease,box-shadow .25s ease;cursor:pointer;border:0}
@@ -367,6 +390,7 @@ p{text-wrap:pretty}
  .social{min-height:44px;padding:0 18px;font-size:14.5px}
  .foot{flex-direction:column;align-items:flex-start;gap:2px;padding-top:24px}
  .lb-close{top:8px;right:8px}
+ .foot-lang{gap:0 16px}
  .drawer-wrap{justify-content:center;align-items:center;padding:16px}
  .drawer{width:100%;height:auto;max-height:88vh;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(18,23,58,0.6);animation:sheetUp .4s cubic-bezier(.2,.8,.2,1) both}
  .dw-head{padding:12px 12px 12px 20px}
@@ -375,7 +399,25 @@ p{text-wrap:pretty}
  .dw-shot{padding:14px}
  .dw-shot img{max-height:260px}
 }
+/* contact button becomes an envelope icon where space is tight */
+@media (max-width:480px),(min-width:821px) and (max-width:1100px){
+ .hdr .cta{width:44px;min-height:44px;padding:0;justify-content:center}
+ .cta-ic{display:block}
+ .cta-t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+ .langsw-menu{right:-52px}
+}
+@media (min-width:821px) and (max-width:1100px){
+ .navlinks{gap:24px}
+}
+@media (max-width:480px){
+ .hdr-in{gap:10px}
+ .hdr-actions{gap:8px}
+ .hero-btns{gap:10px !important}
+ .hero-btns .btn{flex:1 1 auto;justify-content:center;padding:0 18px}
+ .langsw-btn{padding:0 10px;gap:4px}
+}
 @media (prefers-reduced-motion:reduce){
+ .langsw-menu{animation:none}
  .js .reveal{opacity:1;transform:none;transition:none}
  .js .fill{transform:none;transition:none}
  .card,.drawer,.drawer-wrap,.lightbox,.lb-panel{animation:none}
@@ -398,7 +440,17 @@ p{text-wrap:pretty}
 <a class="navlink" href="#certificates">Certificates</a>
 <a class="navlink" href="#speaking">Speaking</a>
 </nav>
-<a class="btn btn-solid" href="#contact">Let's connect</a>
+<div class="hdr-actions">
+<div class="langsw" id="langsw">
+<button type="button" class="langsw-btn" aria-expanded="false" aria-controls="langMenu" aria-label="Language: English"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span class="langsw-code">EN</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+<ul class="langsw-menu" id="langMenu" hidden>
+<li><a class="langlink" href="./" hreflang="en" lang="en" aria-current="page">English<svg class="chk" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></a></li>
+<li><a class="langlink" href="pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)<svg class="chk" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></a></li>
+<li><a class="langlink" href="nl/" hreflang="nl" lang="nl">Nederlands<svg class="chk" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></a></li>
+</ul>
+</div>
+<a class="btn btn-solid cta" href="#contact"><svg class="cta-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 7l8 6 8-6"/></svg><span class="cta-t">Let's connect</span></a>
+</div>
 </div>
 </header>
 
@@ -410,7 +462,7 @@ p{text-wrap:pretty}
 <div class="eyebrow">Content Designer &amp; UX Writer<span class="loc-dot"> · </span><span class="loc">The Netherlands</span></div>
 <h1 class="display">I turn complex journeys into <span class="hl">clear, human</span> words.</h1>
 <p class="lead" style="font-size:19px;max-width:520px">Ten years of shaping content for digital products at companies like Booking.com and Bugaboo, with one mission: meaningful, inclusive content that champions clarity across every platform.</p>
-<div style="display:flex;flex-wrap:wrap;gap:12px">
+<div class="hero-btns" style="display:flex;flex-wrap:wrap;gap:12px">
 <a class="btn btn-solid" href="#work">See my work <span class="arr" aria-hidden="true">→</span></a>
 <a class="btn btn-ghost" href="#about">Read my story</a>
 </div>
@@ -593,6 +645,11 @@ Voices coming through.</p>
 <div class="foot">
 <span class="type" style="font-size:16px;color:#DCD6F2">iara creates</span>
 <span>© <span id="yr">2026</span> Iara Lucena</span>
+<nav class="foot-lang" aria-label="Language">
+<a class="langlink" href="./" hreflang="en" lang="en" aria-current="page">English</a>
+<a class="langlink" href="pt-br/" hreflang="pt-BR" lang="pt-BR">Português</a>
+<a class="langlink" href="nl/" hreflang="nl" lang="nl">Nederlands</a>
+</nav>
 <a href="#top">Back to top <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg></a>
 </div>
 </div>
@@ -638,55 +695,40 @@ Voices coming through.</p>
 
 <script>
 (function () {
+  var T = {"projects": {"buddy": {"title": "Content Design AI Buddy", "alt": "Chat with the Content Design buddy recommending a designer reach out to Iara", "summary": "A hackathon proof of concept that became the design team’s daily content companion.", "paras": ["During a hackathon, a fellow content designer and I created an AI-powered Content Design buddy to test a new way to support teams without dedicated content support.", "After two months of testing and refining its instructions, it launched connected to our content strategy, guidelines, principles and word lists. It recognises design system components, so designers can prompt with text or images for microcopy ideas and strategy insights — and it tells them when to reach out to us.", "Within a month it became the design team’s new best content friend, used daily by product designers and freeing our team for more strategic work."]}, "order": {"title": "Order tracking journey", "alt": "Mobile order details screen with packages and delivery progress", "summary": "End-to-end collaboration from discovery research to delivery.", "paras": ["End-to-end collaboration with the product designer, UX researcher and product team, starting with discovery research, through collaborative solution design and delivery.", "The project included a content-led usability test focused on understanding which content hierarchy would work best on the order details page."], "caption": "This is an AI-generated design concept for illustration purposes."}, "cancel": {"title": "Cancellation flow", "alt": "Cancellation confirmation dialog inviting users to a research conversation", "summary": "Retention through transparency — a respectful, low-friction path.", "paras": ["As the Senior Growth Content Designer, I refined the copy and information hierarchy across the entire cancellation flow.", "The approach was rooted in transparency: clearly outlining the consequences of cancelling while avoiding guilt-tripping language.", "We also created a research touchpoint — thanking users for working together, and inviting them to share their experience so we could learn from it."]}, "wallet": {"title": "Wallet & rewards at Booking.com", "alt": "Booking.com My Wallet and My Rewards screens", "summary": "Making a complex loyalty product feel easy to understand and trustworthy.", "paras": ["As the UX Writer, I wrote the customer-facing copy for one of the first versions of Booking.com’s new travel rewards and wallet system, launching across devices and platforms.", "Working with product teams in the FinTech unit, I kept language consistent across touchpoints and clearly explained how points, refunds and redemptions work.", "Clarity over cleverness: short sentences, plain language and the most important information first — shaped by user testing and A/B results, in close collaboration with design, product and engineering."]}, "agile": {"title": "Agile planning tool beta launch", "alt": "Epics beta planning board, settings and in-product banners", "summary": "Leading UX writing for a brand-new product launch.", "paras": ["I led the UX writing for the launch of a new agile planning tool: core UI copy, in-product promotional banners to drive feature awareness and adoption, and beta release notes for early users.", "I collaborated closely with product teams and technical writers to keep messaging consistent across the product and its documentation, aligning content strategy with discovery and ongoing engagement."]}, "bugaboo": {"title": "Website replatforming at Bugaboo", "alt": "Collage of Bugaboo web pages, shopping cart and order emails", "summary": "Six months, one writer, an entire digital ecosystem.", "paras": ["As the sole writer on the digital team, I led the creation of all digital content during a six-month overhaul of the entire digital ecosystem and website replatforming.", "My role spanned UX writing, product content, SEO optimisation and brand content — creating new content for strategic highlights and refining existing content for the new launch.", "Learnings: sharper project management, and proof of the power of collaborative, end-to-end content design."]}, "library": {"title": "Scaled content design library", "alt": "Searchable microcopy library inside the design tool", "summary": "A self-service library so product teams can write great UI copy on their own.", "paras": ["A strategic initiative to decentralise content design support: a searchable library embedded in the design system, so product designers could prepare designs for critiques and showcases independently.", "I led its creation in the content design team. It moved us away from repetitive microcopy polishing and reclaimed time for high-priority, strategic content work."]}, "l10n": {"title": "Translations workflow automation", "alt": "Before and after diagram of the translation workflow", "summary": "Bridging engineering and localization over an 8-month project.", "paras": ["Acting as the bridge between engineering and localization, I defined requirements for a centralised, automated translation workflow and managed the feedback loop with translators and stakeholders.", "I translated complex system logic into documentation and led cross-functional “Ask Me Anything” sessions for Product, Localization and Marketing.", "It ensured the microcopy created and validated in research actually reached users in every language."]}}, "cats": {"uxui": "UX/UI highlight", "journeys": "User journeys", "strategy": "Strategy & scalability"}, "cert_dates": {"ideo-proto": "Oct 2026", "ideo-story": "Sep 2026", "ixdf": "Jun 2026", "google": "2026", "maven": "Jul 2024"}, "skills": ["UX writing", "Content strategy", "Information hierarchy", "Content-led research", "Design systems", "Localization", "AI tooling", "Accessibility"], "ui": {"count": "{n} projects", "status_all": "Showing all {total} projects · pick a focus area to filter", "status_some": "Showing {n} of {total} · tap again to show all", "read_story": "Read the story", "view_cert": "View certificate", "cert_alt": "Certificate"}};
+  var BASE = '';
+  function fmt(s, v) { return s.replace(/\{(\w+)\}/g, function (m, k) { return v[k]; }); }
+  function merge(o, t) { for (var k in t) o[k] = t[k]; return o; }
+
   var PROJECTS = [
-    { id: 'buddy', cats: ['strategy'], tag: 'Strategy & scalability', title: 'Content Design AI Buddy', img: 'images/work-buddy.webp', alt: 'Chat with the Content Design buddy recommending a designer reach out to Iara', summary: 'A hackathon proof of concept that became the design team’s daily content companion.', paras: [
-      'During a hackathon, a fellow content designer and I created an AI-powered Content Design buddy to test a new way to support teams without dedicated content support.',
-      'After two months of testing and refining its instructions, it launched connected to our content strategy, guidelines, principles and word lists. It recognises design system components, so designers can prompt with text or images for microcopy ideas and strategy insights — and it tells them when to reach out to us.',
-      'Within a month it became the design team’s new best content friend, used daily by product designers and freeing our team for more strategic work.'
-    ]},
-    { id: 'order', cats: ['journeys', 'uxui'], tag: 'User journeys', title: 'Order tracking journey', img: 'images/work-order.webp', alt: 'Mobile order details screen with packages and delivery progress', caption: 'This is an AI-generated design concept for illustration purposes.', summary: 'End-to-end collaboration from discovery research to delivery.', paras: [
-      'End-to-end collaboration with the product designer, UX researcher and product team, starting with discovery research, through collaborative solution design and delivery.',
-      'The project included a content-led usability test focused on understanding which content hierarchy would work best on the order details page.'
-    ]},
-    { id: 'cancel', cats: ['journeys', 'uxui'], tag: 'User journeys', title: 'Cancellation flow', img: 'images/work-cancel.webp', alt: 'Cancellation confirmation dialog inviting users to a research conversation', summary: 'Retention through transparency — a respectful, low-friction path.', paras: [
-      'As the Senior Growth Content Designer, I refined the copy and information hierarchy across the entire cancellation flow.',
-      'The approach was rooted in transparency: clearly outlining the consequences of cancelling while avoiding guilt-tripping language.',
-      'We also created a research touchpoint — thanking users for working together, and inviting them to share their experience so we could learn from it.'
-    ]},
-    { id: 'wallet', cats: ['uxui'], tag: 'UX/UI highlight', title: 'Wallet & rewards at Booking.com', img: 'images/work-wallet.webp', alt: 'Booking.com My Wallet and My Rewards screens', summary: 'Making a complex loyalty product feel easy to understand and trustworthy.', paras: [
-      'As the UX Writer, I wrote the customer-facing copy for one of the first versions of Booking.com’s new travel rewards and wallet system, launching across devices and platforms.',
-      'Working with product teams in the FinTech unit, I kept language consistent across touchpoints and clearly explained how points, refunds and redemptions work.',
-      'Clarity over cleverness: short sentences, plain language and the most important information first — shaped by user testing and A/B results, in close collaboration with design, product and engineering.'
-    ]},
-    { id: 'agile', cats: ['uxui'], tag: 'UX/UI highlight', title: 'Agile planning tool beta launch', img: 'images/work-agile.webp', alt: 'Epics beta planning board, settings and in-product banners', summary: 'Leading UX writing for a brand-new product launch.', paras: [
-      'I led the UX writing for the launch of a new agile planning tool: core UI copy, in-product promotional banners to drive feature awareness and adoption, and beta release notes for early users.',
-      'I collaborated closely with product teams and technical writers to keep messaging consistent across the product and its documentation, aligning content strategy with discovery and ongoing engagement.'
-    ]},
-    { id: 'bugaboo', cats: ['uxui'], tag: 'UX/UI highlight', title: 'Website replatforming at Bugaboo', img: 'images/work-bugaboo.webp', alt: 'Collage of Bugaboo web pages, shopping cart and order emails', summary: 'Six months, one writer, an entire digital ecosystem.', paras: [
-      'As the sole writer on the digital team, I led the creation of all digital content during a six-month overhaul of the entire digital ecosystem and website replatforming.',
-      'My role spanned UX writing, product content, SEO optimisation and brand content — creating new content for strategic highlights and refining existing content for the new launch.',
-      'Learnings: sharper project management, and proof of the power of collaborative, end-to-end content design.'
-    ]},
-    { id: 'library', cats: ['strategy'], tag: 'Strategy & scalability', title: 'Scaled content design library', img: 'images/work-library.webp', alt: 'Searchable microcopy library inside the design tool', summary: 'A self-service library so product teams can write great UI copy on their own.', paras: [
-      'A strategic initiative to decentralise content design support: a searchable library embedded in the design system, so product designers could prepare designs for critiques and showcases independently.',
-      'I led its creation in the content design team. It moved us away from repetitive microcopy polishing and reclaimed time for high-priority, strategic content work.'
-    ]},
-    { id: 'l10n', cats: ['strategy'], tag: 'Strategy & scalability', title: 'Translations workflow automation', img: 'images/work-l10n.webp', alt: 'Before and after diagram of the translation workflow', summary: 'Bridging engineering and localization over an 8-month project.', paras: [
-      'Acting as the bridge between engineering and localization, I defined requirements for a centralised, automated translation workflow and managed the feedback loop with translators and stakeholders.',
-      'I translated complex system logic into documentation and led cross-functional “Ask Me Anything” sessions for Product, Localization and Marketing.',
-      'It ensured the microcopy created and validated in research actually reached users in every language.'
-    ]}
-  ];
+    { id: 'buddy', cats: ['strategy'], img: 'work-buddy.webp' },
+    { id: 'order', cats: ['journeys', 'uxui'], img: 'work-order.webp' },
+    { id: 'cancel', cats: ['journeys', 'uxui'], img: 'work-cancel.webp' },
+    { id: 'wallet', cats: ['uxui'], img: 'work-wallet.webp' },
+    { id: 'agile', cats: ['uxui'], img: 'work-agile.webp' },
+    { id: 'bugaboo', cats: ['uxui'], img: 'work-bugaboo.webp' },
+    { id: 'library', cats: ['strategy'], img: 'work-library.webp' },
+    { id: 'l10n', cats: ['strategy'], img: 'work-l10n.webp' }
+  ].map(function (p) {
+    merge(p, T.projects[p.id]);
+    p.tag = T.cats[p.cats[0]];
+    p.img = BASE + 'images/' + p.img;
+    return p;
+  });
 
   var CERTS = [
-    { title: 'Prototyping with AI', issuer: 'IDEO U', date: 'Oct 2026', img: 'images/cert-ideo-proto.webp' },
-    { title: 'Creative Storytelling with AI', issuer: 'IDEO U', date: 'Sep 2026', img: 'images/cert-ideo-story.webp' },
-    { title: 'AI for Designers', issuer: 'Interaction Design Foundation', date: 'Jun 2026', img: 'images/cert-ixdf.webp' },
-    { title: 'Gen AI: Beyond the Chatbot', issuer: 'Google Cloud · Coursera', date: '2026', img: 'images/cert-google.webp' },
-    { title: 'Designing Generative AI for Conversations and Content', issuer: 'Maven · Convocat', date: 'Jul 2024', img: 'images/cert-maven.webp' }
-  ];
+    { id: 'ideo-proto', title: 'Prototyping with AI', issuer: 'IDEO U', img: 'cert-ideo-proto.webp' },
+    { id: 'ideo-story', title: 'Creative Storytelling with AI', issuer: 'IDEO U', img: 'cert-ideo-story.webp' },
+    { id: 'ixdf', title: 'AI for Designers', issuer: 'Interaction Design Foundation', img: 'cert-ixdf.webp' },
+    { id: 'google', title: 'Gen AI: Beyond the Chatbot', issuer: 'Google Cloud · Coursera', img: 'cert-google.webp' },
+    { id: 'maven', title: 'Designing Generative AI for Conversations and Content', issuer: 'Maven · Convocat', img: 'cert-maven.webp' }
+  ].map(function (c) {
+    c.date = T.cert_dates[c.id];
+    c.img = BASE + 'images/' + c.img;
+    return c;
+  });
 
-  var SKILLS = ['UX writing', 'Content strategy', 'Information hierarchy', 'Content-led research', 'Design systems', 'Localization', 'AI tooling', 'Accessibility'];
+  var SKILLS = T.skills;
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -719,7 +761,7 @@ Voices coming through.</p>
   tabs.forEach(function (t) {
     var key = t.getAttribute('data-key');
     var n = PROJECTS.filter(function (p) { return p.cats.indexOf(key) > -1; }).length;
-    t.querySelector('.a-c').textContent = n + ' projects';
+    t.querySelector('.a-c').textContent = fmt(T.ui.count, { n: n });
     t.addEventListener('click', function () { setFilter(filter === key ? 'all' : key); });
   });
 
@@ -732,8 +774,8 @@ Voices coming through.</p>
       t.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
     status.textContent = f === 'all'
-      ? 'Showing all ' + PROJECTS.length + ' projects · pick a focus area to filter'
-      : 'Showing ' + list.length + ' of ' + PROJECTS.length + ' · tap again to show all';
+      ? fmt(T.ui.status_all, { total: PROJECTS.length })
+      : fmt(T.ui.status_some, { n: list.length, total: PROJECTS.length });
     renderGrid();
   }
 
@@ -751,8 +793,8 @@ Voices coming through.</p>
       body.appendChild(el('p', null, p.summary));
       var b = el('button', 'toggle');
       b.type = 'button'; b.setAttribute('aria-haspopup', 'dialog');
-      b.innerHTML = 'Read the story ' + ARROW;
-      b.setAttribute('aria-label', 'Read the story: ' + p.title);
+      b.innerHTML = T.ui.read_story + ' ' + ARROW;
+      b.setAttribute('aria-label', T.ui.read_story + ': ' + p.title);
       b.addEventListener('click', function () { openDrawer(i); });
       body.appendChild(b);
       card.appendChild(shot); card.appendChild(body);
@@ -793,7 +835,7 @@ Voices coming through.</p>
   var certGrid = document.getElementById('certGrid'), lb = document.getElementById('lightbox');
   CERTS.forEach(function (c) {
     var b = el('button', 'cert reveal');
-    b.type = 'button'; b.setAttribute('aria-label', 'View certificate: ' + c.title);
+    b.type = 'button'; b.setAttribute('aria-label', T.ui.view_cert + ': ' + c.title);
     var wrap = el('span', 'c-img'); var img = el('img'); img.src = c.img; img.alt = ''; img.loading = 'lazy'; wrap.appendChild(img);
     var txt = el('span', 'c-txt');
     txt.appendChild(el('span', 'c-iss', c.issuer));
@@ -802,7 +844,7 @@ Voices coming through.</p>
     b.appendChild(wrap); b.appendChild(txt);
     b.addEventListener('click', function () {
       lastFocus = b;
-      var li = document.getElementById('lbImg'); li.src = c.img; li.alt = 'Certificate: ' + c.title;
+      var li = document.getElementById('lbImg'); li.src = c.img; li.alt = T.ui.cert_alt + ': ' + c.title;
       document.getElementById('lbTitle').textContent = c.title;
       document.getElementById('lbMeta').textContent = c.issuer + ' · ' + c.date;
       lb.hidden = false; document.body.classList.add('locked');
@@ -813,9 +855,26 @@ Voices coming through.</p>
   function closeLb() { lb.hidden = true; document.body.classList.remove('locked'); if (lastFocus) lastFocus.focus(); }
   lb.querySelectorAll('[data-close]').forEach(function (b) { b.addEventListener('click', closeLb); });
 
+  /* language switcher */
+  var lsw = document.getElementById('langsw'), lbtn = lsw.querySelector('.langsw-btn'), lmenu = document.getElementById('langMenu');
+  function setLangMenu(open) {
+    lmenu.hidden = !open; lbtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) { var cur = lmenu.querySelector('[aria-current]') || lmenu.querySelector('a'); cur.focus(); }
+  }
+  lbtn.addEventListener('click', function () { setLangMenu(lmenu.hidden); });
+  document.addEventListener('click', function (e) { if (!lmenu.hidden && !lsw.contains(e.target)) setLangMenu(false); });
+  lsw.addEventListener('focusout', function (e) { if (!lmenu.hidden && !lsw.contains(e.relatedTarget)) setLangMenu(false); });
+  document.querySelectorAll('.langlink').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (a.hasAttribute('aria-current')) { e.preventDefault(); setLangMenu(false); return; }
+      if (location.hash) a.href = a.getAttribute('href').split('#')[0] + location.hash;
+    });
+  });
+
   /* Escape closes any open overlay */
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
+    if (!lmenu.hidden) { setLangMenu(false); lbtn.focus(); return; }
     if (!drawer.hidden) closeDrawer();
     if (!lb.hidden) closeLb();
   });

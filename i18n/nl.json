@@ -1,0 +1,211 @@
+{
+  "meta_title": "Iara Lucena — Content Designer & UX Writer",
+  "meta_description": "Iara Lucena is Content Designer en UX Writer in Nederland, met 10 jaar ervaring in betekenisvolle, inclusieve content voor digitale producten.",
+  "og_description": "Ik vertaal complexe journeys naar heldere, menselijke woorden.",
+  "skip": "Naar de inhoud",
+  "brand_label": "iara creates, home",
+  "nav_label": "Hoofdmenu",
+  "nav_work": "Werk",
+  "nav_about": "Over mij",
+  "nav_certs": "Certificaten",
+  "nav_speaking": "Lezingen",
+  "cta_connect": "Neem contact op",
+  "lang_switch": "Taal: Nederlands",
+  "lang_nav_label": "Taal",
+
+  "hero_role": "Content Designer & UX Writer",
+  "hero_loc": "Nederland",
+  "hero_title": "Ik vertaal complexe journeys naar <span class=\"hl\">heldere, menselijke</span> woorden.",
+  "hero_lead": "Tien jaar ervaring met content voor digitale producten, bij bedrijven als Booking.com en Bugaboo. Met één missie: betekenisvolle, inclusieve content die helderheid vooropstelt, op elk platform.",
+  "btn_work": "Bekijk mijn werk",
+  "btn_story": "Lees mijn verhaal",
+  "stat_1": "jaar in content",
+  "stat_2": "werktalen",
+  "stat_3": "jaar in Nederland",
+  "portrait_alt": "Portret van Iara Lucena, glimlachend voor een blauw abstract schilderij",
+  "badge_open": "Open voor nieuwe projecten",
+
+  "start_eyebrow": "Begin hier",
+  "start_title": "Drie verzen, drie ingangen",
+  "door1_title": "Mijn werk",
+  "door1_poem": "Woorden in harmonie,\nTonen kunde en essentie,\nEen portfolio maakt ideeën zichtbaar.",
+  "door1_more": "Bekijk projecten",
+  "door2_title": "Over mij",
+  "door2_poem": "Woorden op schermen vliegen,\nJourneys gevormd in één regel,\nEen creatief leven verfijnd.",
+  "door2_more": "Lees mijn verhaal",
+  "door3_title": "Lezingen",
+  "door3_poem": "Microfoon, podium, spotlight,\nVerhalen die verbinden,\nStemmen die doorklinken.",
+  "door3_more": "Bekijk ze",
+  "marquee_label": "Expertisegebieden",
+
+  "work_eyebrow": "Geselecteerd werk",
+  "work_title": "Projecten waar ik trots op ben",
+  "work_lead": "Mijn recentste en mooiste bijdragen als Content Designer, samen met productteams, collega-designers en contentspecialisten. Kies een focusgebied om te filteren.",
+  "tabs_label": "Filter op focusgebied",
+  "tab_uxui": "UX/UI-hoogtepunten",
+  "tab_journeys": "User journeys",
+  "tab_strategy": "Strategie & schaalbaarheid",
+  "work_more": "Meer van mijn werk zien? <a href=\"mailto:iaralucenatoes@gmail.com?subject=Portfolio%20aanvraag\">Vraag mijn cv en uitgebreide portfoliovoorbeelden op</a>.",
+
+  "about_eyebrow": "Over mij",
+  "about_title": "Hoi, ik ben Iara!",
+  "about_p1": "Ik ben een Braziliaanse Content Designer en UX Writer met 10 jaar ervaring. Ik woon al ruim 17 jaar in Nederland en ben moeder van twee prachtige jongens.",
+  "about_p2": "Mijn missie is betekenisvolle, inclusieve content maken voor digitale ervaringen. Ik maak digitale journeys menselijker door complexe zakelijke uitdagingen om te zetten in doelgerichte, inclusieve verhalen die helderheid en toegankelijkheid vooropstellen, op elk platform en apparaat.",
+  "cv_btn": "Bekijk mijn online cv",
+  "new_tab": "(opent in een nieuw tabblad)",
+  "lang_title": "Talen",
+  "lang_pt": "Portugees",
+  "lang_pt_level": "Moedertaal",
+  "lang_en": "Engels",
+  "lang_en_level": "Tweetalig · 10+ jaar professioneel",
+  "lang_nl": "Nederlands",
+  "lang_nl_level": "Vloeiend",
+  "edu_title": "Opleiding",
+  "edu_degree": "Psychologie, Bachelor of Science (BSc)",
+  "edu_valid": "Officieel gewaardeerd door Nuffic in 2026",
+  "edu_chip1": "Onderzoeksgroep Consumentenpsychologie",
+  "edu_chip2": "Assistent in het gedragslab",
+  "edu_chip3": "Redactie van Científico Magazine",
+
+  "certs_eyebrow": "Cursussen & certificaten",
+  "certs_title": "Altijd blijven leren",
+  "certs_lead": "Recente certificeringen, met de focus op ontwerpen met en voor AI. Tik op een certificaat om het van dichtbij te bekijken.",
+
+  "talks_eyebrow": "Lezingen",
+  "talks_title": "Microfoon, podium & spotlight",
+  "talks_lead": "Lezingen, gastcolleges en gesprekken over content design, strategie en storytelling.",
+  "talk1_kind": "Conferentie",
+  "talk1_title": "Figma Config 2022",
+  "talk1_desc": "Met Bindu: hoe we een gezamenlijke productaudit organiseerden om verouderde UX-, UI- en toegankelijkheidsproblemen vanuit verschillende expertises in kaart te brengen.",
+  "talk2_kind": "Gastcollege",
+  "talk2_title": "Breathing Life into Structure Systems",
+  "talk2_desc": "Contentstrategie en mijn werk als Content Designer, aan De Haagse Hogeschool in 2025 en 2026.",
+  "talk3_kind": "Podcast",
+  "talk3_title": "Content Rookie met Nicole Michaelis",
+  "talk3_desc": "Hoe ik begon, wat we zo leuk vinden aan ons vak, storytelling als content designer en het framen van problemen.",
+  "talk4_kind": "Interview",
+  "talk4_title": "Waarom niet-moedertaalsprekers geweldige UX writers zijn",
+  "talk4_desc": "Een gesprek met Dragana Milovanovic voor het UX Content Collective.",
+
+  "contact_eyebrow": "Laten we kennismaken",
+  "contact_title": "Een journey die heldere woorden nodig heeft?",
+  "back_top": "Terug naar boven",
+
+  "close_project": "Project sluiten",
+  "prev": "Vorige",
+  "next": "Volgende",
+  "close": "Sluiten",
+  "close_cert": "Certificaat sluiten",
+
+  "cats": {
+    "uxui": "UX/UI-hoogtepunt",
+    "journeys": "User journeys",
+    "strategy": "Strategie & schaalbaarheid"
+  },
+  "cert_dates": {
+    "ideo-proto": "okt. 2026",
+    "ideo-story": "sep. 2026",
+    "ixdf": "jun. 2026",
+    "google": "2026",
+    "maven": "jul. 2024"
+  },
+  "skills": [
+    "UX writing",
+    "Contentstrategie",
+    "Informatiehiërarchie",
+    "Contentgedreven onderzoek",
+    "Design systems",
+    "Lokalisatie",
+    "AI-tools",
+    "Toegankelijkheid"
+  ],
+  "ui": {
+    "count": "{n} projecten",
+    "status_all": "Alle {total} projecten · kies een focusgebied om te filteren",
+    "status_some": "{n} van de {total} · tik nogmaals om alles te zien",
+    "read_story": "Lees het verhaal",
+    "view_cert": "Bekijk certificaat",
+    "cert_alt": "Certificaat"
+  },
+
+  "projects": {
+    "buddy": {
+      "title": "Content Design AI Buddy",
+      "alt": "Chat waarin de Content Design buddy aanraadt om contact op te nemen met Iara",
+      "summary": "Een proof of concept uit een hackathon dat uitgroeide tot het dagelijkse contentmaatje van het designteam.",
+      "paras": [
+        "Tijdens een hackathon bouwden een collega-contentdesigner en ik een AI-gestuurde Content Design buddy, om een nieuwe manier te testen om teams zonder vaste contentondersteuning te helpen.",
+        "Na twee maanden testen en verfijnen van de instructies ging hij live, gekoppeld aan onze contentstrategie, richtlijnen, principes en woordenlijsten. Hij herkent componenten uit het design system, zodat designers met tekst of afbeeldingen om microcopy-ideeën en strategische inzichten kunnen vragen — en hij geeft aan wanneer ze beter bij ons kunnen aankloppen.",
+        "Binnen een maand was hij de nieuwe beste contentvriend van het designteam: dagelijks gebruikt door productdesigners, waardoor ons team meer tijd kreeg voor strategisch werk."
+      ]
+    },
+    "order": {
+      "title": "Journey voor het volgen van bestellingen",
+      "alt": "Mobiel scherm met bestelgegevens, pakketten en de bezorgstatus",
+      "caption": "Dit is een met AI gegenereerd designconcept, alleen ter illustratie.",
+      "summary": "End-to-end samenwerking, van discovery-onderzoek tot oplevering.",
+      "paras": [
+        "End-to-end samenwerking met de productdesigner, UX-researcher en het productteam: van discovery-onderzoek, via het samen ontwerpen van de oplossing, tot en met de oplevering.",
+        "Het project omvatte onder meer een contentgedreven usabilitytest, gericht op welke contenthiërarchie het best werkte op de pagina met bestelgegevens."
+      ]
+    },
+    "cancel": {
+      "title": "Opzegflow",
+      "alt": "Bevestigingsvenster na het opzeggen, met een uitnodiging voor een onderzoeksgesprek",
+      "summary": "Klantbehoud door transparantie — een respectvol pad zonder onnodige drempels.",
+      "paras": [
+        "Als Senior Growth Content Designer verfijnde ik de teksten en de informatiehiërarchie van de hele opzegflow.",
+        "De aanpak was gebaseerd op transparantie: duidelijk maken wat opzeggen betekent, zonder taal die gebruikers een schuldgevoel geeft.",
+        "We creëerden ook een onderzoeksmoment: we bedankten gebruikers voor de samenwerking en nodigden ze uit hun ervaring te delen, zodat we ervan konden leren."
+      ]
+    },
+    "wallet": {
+      "title": "Beloningen & Wallet bij Booking.com",
+      "alt": "De schermen My Wallet en My Rewards van Booking.com",
+      "summary": "Een complex loyaliteitsproduct begrijpelijk en betrouwbaar laten voelen.",
+      "paras": [
+        "Als UX Writer schreef ik de klantgerichte teksten voor een van de eerste versies van het nieuwe reisbeloningen- en walletsysteem van Booking.com, dat op verschillende apparaten en platforms live ging.",
+        "Samen met productteams binnen de FinTech-unit hield ik de taal consistent over alle touchpoints en legde ik helder uit hoe punten, terugbetalingen en inwisselen werken.",
+        "Helderheid boven slimmigheid: korte zinnen, eenvoudige taal en het belangrijkste eerst — gevormd door gebruikerstests en A/B-testresultaten, in nauwe samenwerking met design, product en engineering."
+      ]
+    },
+    "agile": {
+      "title": "Bètalancering van een agile planningstool",
+      "alt": "Planbord van Epics bèta, instellingen en banners in het product",
+      "summary": "UX writing leiden voor de lancering van een gloednieuw product.",
+      "paras": [
+        "Ik leidde de UX writing voor de lancering van een nieuwe agile planningstool: de belangrijkste UI-teksten, promotiebanners in het product om bekendheid en gebruik van functies te stimuleren, en releasenotes voor de eerste bètagebruikers.",
+        "Ik werkte nauw samen met productteams en technisch schrijvers om de boodschap consistent te houden in het product en de documentatie, en stemde de contentstrategie af op zowel discovery als blijvende betrokkenheid."
+      ]
+    },
+    "bugaboo": {
+      "title": "Replatforming van de Bugaboo-website",
+      "alt": "Collage van Bugaboo-webpagina's, winkelwagen en bestelmails",
+      "summary": "Zes maanden, één schrijver, een compleet digitaal ecosysteem.",
+      "paras": [
+        "Als enige schrijver in het digitale team leidde ik de creatie van alle digitale content tijdens een vernieuwing van het complete digitale ecosysteem en de replatforming van de website, die zes maanden duurde.",
+        "Mijn rol omvatte UX writing, productcontent, SEO-optimalisatie en merkcontent: nieuwe content voor strategische speerpunten en het verfijnen van bestaande content voor de nieuwe lancering.",
+        "Wat ik leerde: scherper projectmanagement, en het bewijs van de kracht van collaboratief, end-to-end content design."
+      ]
+    },
+    "library": {
+      "title": "Schaalbare content design-bibliotheek",
+      "alt": "Doorzoekbare microcopybibliotheek in de designtool",
+      "summary": "Een selfservicebibliotheek waarmee productteams zelf sterke UI-teksten schrijven.",
+      "paras": [
+        "Een strategisch initiatief om content design-ondersteuning te decentraliseren: een doorzoekbare bibliotheek in het design system, zodat productdesigners hun ontwerpen zelfstandig konden voorbereiden op critiques en presentaties.",
+        "Ik leidde de ontwikkeling ervan binnen het content design-team. Zo waren we minder tijd kwijt aan het herhaaldelijk polijsten van microcopy en hielden we tijd over voor strategisch contentwerk met hoge prioriteit."
+      ]
+    },
+    "l10n": {
+      "title": "Automatisering van de vertaalworkflow",
+      "alt": "Voor-en-na-diagram van de vertaalworkflow",
+      "summary": "De brug tussen engineering en lokalisatie, in een project van 8 maanden.",
+      "paras": [
+        "Als brug tussen engineering en lokalisatie stelde ik de eisen op voor een centrale, geautomatiseerde vertaalworkflow en beheerde ik de feedbackloop met vertalers en stakeholders.",
+        "Ik vertaalde complexe systeemlogica naar documentatie en leidde multidisciplinaire “Ask Me Anything”-sessies voor Product, Lokalisatie en Marketing.",
+        "Zo kwam de microcopy die in onderzoek was gemaakt en gevalideerd ook echt in elke taal bij gebruikers terecht."
+      ]
+    }
+  }
+}

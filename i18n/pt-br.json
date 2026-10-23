@@ -1,0 +1,211 @@
+{
+  "meta_title": "Iara Lucena — Content Designer e UX Writer",
+  "meta_description": "Iara Lucena é Content Designer e UX Writer nos Países Baixos, com 10 anos de experiência criando conteúdo significativo e inclusivo para produtos digitais.",
+  "og_description": "Transformo jornadas complexas em palavras claras e humanas.",
+  "skip": "Pular para o conteúdo",
+  "brand_label": "iara creates, página inicial",
+  "nav_label": "Principal",
+  "nav_work": "Trabalhos",
+  "nav_about": "Sobre",
+  "nav_certs": "Certificados",
+  "nav_speaking": "Palestras",
+  "cta_connect": "Vamos conversar",
+  "lang_switch": "Idioma: Português (Brasil)",
+  "lang_nav_label": "Idioma",
+
+  "hero_role": "Content Designer & UX Writer",
+  "hero_loc": "Países Baixos",
+  "hero_title": "Transformo jornadas complexas em palavras <span class=\"hl\">claras e humanas</span>.",
+  "hero_lead": "Dez anos criando conteúdo para produtos digitais em empresas como Booking.com e Bugaboo, com uma missão: conteúdo significativo e inclusivo, que prioriza a clareza em todas as plataformas.",
+  "btn_work": "Ver meus trabalhos",
+  "btn_story": "Conheça minha história",
+  "stat_1": "anos em conteúdo",
+  "stat_2": "idiomas de trabalho",
+  "stat_3": "anos nos Países Baixos",
+  "portrait_alt": "Retrato de Iara Lucena sorrindo, em frente a uma pintura abstrata azul",
+  "badge_open": "Aberta a novos projetos",
+
+  "start_eyebrow": "Comece por aqui",
+  "start_title": "Três versos, três caminhos",
+  "door1_title": "Meus trabalhos",
+  "door1_poem": "Palavras em harmonia,\nMostrando talento e essência,\nO portfólio dá vida às ideias.",
+  "door1_more": "Ver projetos",
+  "door2_title": "Sobre mim",
+  "door2_poem": "Palavras na tela ganham asas,\nTraçando jornadas numa linha,\nVida criativa lapidada.",
+  "door2_more": "Conheça minha história",
+  "door3_title": "Palestras",
+  "door3_poem": "Microfone, palco e holofote,\nHistórias tecendo conexões,\nVozes que se fazem ouvir.",
+  "door3_more": "Confira",
+  "marquee_label": "Áreas de atuação",
+
+  "work_eyebrow": "Trabalhos selecionados",
+  "work_title": "Projetos dos quais me orgulho",
+  "work_lead": "Minhas contribuições mais recentes e das quais mais me orgulho como Content Designer, ao lado de times de produto, outros designers e profissionais de conteúdo. Escolha uma área para filtrar.",
+  "tabs_label": "Filtrar por área",
+  "tab_uxui": "Destaques de UX/UI",
+  "tab_journeys": "Jornadas do usuário",
+  "tab_strategy": "Estratégia e escalabilidade",
+  "work_more": "Para ver mais do meu trabalho, <a href=\"mailto:iaralucenatoes@gmail.com?subject=Pedido%20de%20portf%C3%B3lio\">peça meu currículo e exemplos detalhados de portfólio</a>.",
+
+  "about_eyebrow": "Sobre mim",
+  "about_title": "Oi, eu sou a Iara!",
+  "about_p1": "Sou uma Content Designer e UX Writer brasileira com 10 anos de experiência. Moro nos Países Baixos há mais de 17 anos e sou mãe de dois meninos lindos.",
+  "about_p2": "Minha missão é criar conteúdo significativo e inclusivo para experiências digitais. Humanizo jornadas digitais transformando desafios de negócio complexos em narrativas inclusivas e com propósito, que priorizam a clareza e a acessibilidade em todas as plataformas e dispositivos.",
+  "cv_btn": "Ver meu currículo online",
+  "new_tab": "(abre em uma nova aba)",
+  "lang_title": "Idiomas",
+  "lang_pt": "Português",
+  "lang_pt_level": "Nativo",
+  "lang_en": "Inglês",
+  "lang_en_level": "Bilíngue · mais de 10 anos de uso profissional",
+  "lang_nl": "Holandês",
+  "lang_nl_level": "Fluente",
+  "edu_title": "Formação",
+  "edu_degree": "Bacharelado em Psicologia",
+  "edu_valid": "Diploma validado oficialmente pela Nuffic em 2026",
+  "edu_chip1": "Grupo de Pesquisa em Psicologia do Consumidor",
+  "edu_chip2": "Assistente de Laboratório Comportamental",
+  "edu_chip3": "Equipe editorial da revista Científico",
+
+  "certs_eyebrow": "Cursos e certificados",
+  "certs_title": "Sempre aprendendo",
+  "certs_lead": "Certificações recentes, com foco em design com e para IA. Toque em uma para ver de perto.",
+
+  "talks_eyebrow": "Palestras",
+  "talks_title": "Microfone, palco e holofote",
+  "talks_lead": "Palestras, aulas e conversas sobre content design, estratégia e storytelling.",
+  "talk1_kind": "Conferência",
+  "talk1_title": "Figma Config 2022",
+  "talk1_desc": "Com a Bindu: como organizamos uma auditoria de produto colaborativa para identificar problemas legados de UX, UI e acessibilidade sob o olhar de diferentes especialistas.",
+  "talk2_kind": "Aula convidada",
+  "talk2_title": "Breathing Life into Structure Systems",
+  "talk2_desc": "Estratégia de conteúdo e meu trabalho como Content Designer, na De Haagse Hogeschool (Universidade de Ciências Aplicadas de Haia), em 2025 e 2026.",
+  "talk3_kind": "Podcast",
+  "talk3_title": "Content Rookie com Nicole Michaelis",
+  "talk3_desc": "Como comecei, o que amamos no nosso trabalho, storytelling como content designer e como enquadrar problemas.",
+  "talk4_kind": "Entrevista",
+  "talk4_title": "Por que quem não é nativo em inglês pode ser um ótimo UX writer",
+  "talk4_desc": "Uma conversa com Dragana Milovanovic para o UX Content Collective.",
+
+  "contact_eyebrow": "Vamos conversar",
+  "contact_title": "Tem uma jornada que precisa de palavras mais claras?",
+  "back_top": "Voltar ao topo",
+
+  "close_project": "Fechar projeto",
+  "prev": "Anterior",
+  "next": "Próximo",
+  "close": "Fechar",
+  "close_cert": "Fechar certificado",
+
+  "cats": {
+    "uxui": "Destaque de UX/UI",
+    "journeys": "Jornadas do usuário",
+    "strategy": "Estratégia e escalabilidade"
+  },
+  "cert_dates": {
+    "ideo-proto": "out. 2026",
+    "ideo-story": "set. 2026",
+    "ixdf": "jun. 2026",
+    "google": "2026",
+    "maven": "jul. 2024"
+  },
+  "skills": [
+    "UX writing",
+    "Estratégia de conteúdo",
+    "Hierarquia da informação",
+    "Pesquisa guiada por conteúdo",
+    "Design systems",
+    "Localização",
+    "Ferramentas de IA",
+    "Acessibilidade"
+  ],
+  "ui": {
+    "count": "{n} projetos",
+    "status_all": "Mostrando os {total} projetos · escolha uma área para filtrar",
+    "status_some": "Mostrando {n} de {total} · toque de novo para ver todos",
+    "read_story": "Ler a história",
+    "view_cert": "Ver certificado",
+    "cert_alt": "Certificado"
+  },
+
+  "projects": {
+    "buddy": {
+      "title": "Content Design AI Buddy",
+      "alt": "Conversa em que o Content Design buddy recomenda falar com a Iara",
+      "summary": "Uma prova de conceito de hackathon que virou a parceira diária de conteúdo do time de design.",
+      "paras": [
+        "Durante um hackathon, eu e outra pessoa content designer criamos um Content Design buddy com IA para testar uma nova forma de apoiar times sem suporte dedicado de conteúdo.",
+        "Depois de dois meses testando e refinando as instruções, ele foi lançado conectado à nossa estratégia de conteúdo, diretrizes, princípios e glossários. Ele reconhece componentes do design system, então designers podem enviar texto ou imagens e receber ideias de microcopy e insights de estratégia — e ele avisa quando é hora de falar com a gente.",
+        "Em um mês, virou o novo melhor amigo do time de design quando o assunto é conteúdo: usado diariamente por product designers, liberando nosso time para trabalhos mais estratégicos."
+      ]
+    },
+    "order": {
+      "title": "Jornada de acompanhamento de pedidos",
+      "alt": "Tela de detalhes do pedido no celular, com pacotes e o andamento da entrega",
+      "caption": "Este é um conceito de design gerado por IA, apenas para fins ilustrativos.",
+      "summary": "Colaboração de ponta a ponta, da pesquisa de descoberta à entrega.",
+      "paras": [
+        "Colaboração de ponta a ponta com o product designer, o UX researcher e o time de produto, começando pela pesquisa de descoberta, passando pelo design colaborativo da solução até a entrega.",
+        "O projeto incluiu um teste de usabilidade guiado por conteúdo, focado em entender qual hierarquia de conteúdo funcionaria melhor na página de detalhes do pedido."
+      ]
+    },
+    "cancel": {
+      "title": "Fluxo de cancelamento",
+      "alt": "Caixa de confirmação de cancelamento com um convite para uma conversa de pesquisa",
+      "summary": "Retenção com transparência — um caminho respeitoso e sem atrito.",
+      "paras": [
+        "Como Senior Growth Content Designer, refinei os textos e a hierarquia da informação em todo o fluxo de cancelamento.",
+        "A abordagem partiu da transparência: deixar claras as consequências de cancelar, sem linguagem que faça a pessoa se sentir culpada.",
+        "Também criamos um ponto de contato para pesquisa — agradecendo pela parceria e convidando as pessoas a compartilhar sua experiência, para que pudéssemos aprender com ela."
+      ]
+    },
+    "wallet": {
+      "title": "Carteira e recompensas na Booking.com",
+      "alt": "Telas My Wallet e My Rewards da Booking.com",
+      "summary": "Fazer um produto de fidelidade complexo parecer simples de entender e confiável.",
+      "paras": [
+        "Como UX Writer, escrevi os textos voltados ao cliente para uma das primeiras versões do novo sistema de recompensas de viagem e carteira da Booking.com, lançado em diferentes dispositivos e plataformas.",
+        "Trabalhando com times de produto da unidade de FinTech, mantive a linguagem consistente em todos os pontos de contato e expliquei com clareza como funcionam pontos, reembolsos e resgates.",
+        "Clareza acima de criatividade: frases curtas, linguagem simples e o mais importante primeiro — com base em testes com usuários e resultados de testes A/B, em estreita colaboração com design, produto e engenharia."
+      ]
+    },
+    "agile": {
+      "title": "Lançamento beta de uma ferramenta de planejamento ágil",
+      "alt": "Quadro de planejamento do Epics beta, configurações e banners dentro do produto",
+      "summary": "Liderando o UX writing do lançamento de um produto totalmente novo.",
+      "paras": [
+        "Liderei o UX writing do lançamento de uma nova ferramenta de planejamento ágil: os principais textos da interface, banners promocionais dentro do produto para gerar conhecimento e adoção das funcionalidades, e as notas de versão da beta para os primeiros usuários.",
+        "Colaborei de perto com times de produto e technical writers para manter as mensagens consistentes no produto e na documentação, alinhando a estratégia de conteúdo tanto à descoberta quanto ao engajamento contínuo."
+      ]
+    },
+    "bugaboo": {
+      "title": "Nova plataforma do site da Bugaboo",
+      "alt": "Colagem de páginas do site da Bugaboo, carrinho de compras e e-mails de pedido",
+      "summary": "Seis meses, uma redatora, um ecossistema digital inteiro.",
+      "paras": [
+        "Como única redatora do time digital, liderei a criação de todo o conteúdo durante uma reformulação de seis meses do ecossistema digital e a migração do site para uma nova plataforma.",
+        "Meu papel abrangeu UX writing, conteúdo de produto, otimização de SEO e conteúdo de marca — criando conteúdo novo para destaques estratégicos e refinando o conteúdo existente para o novo lançamento.",
+        "Aprendizados: uma gestão de projetos mais afiada e a prova do poder de um content design colaborativo, de ponta a ponta."
+      ]
+    },
+    "library": {
+      "title": "Biblioteca de content design em escala",
+      "alt": "Biblioteca pesquisável de microcopy dentro da ferramenta de design",
+      "summary": "Uma biblioteca de autoatendimento para que times de produto escrevam ótimos textos de interface por conta própria.",
+      "paras": [
+        "Uma iniciativa estratégica para descentralizar o suporte de content design: uma biblioteca pesquisável integrada ao design system, para que product designers pudessem preparar seus designs para críticas e apresentações com autonomia.",
+        "Liderei sua criação no time de content design. Ela nos tirou do polimento repetitivo de microcopy e devolveu tempo para trabalhos de conteúdo estratégicos e de alta prioridade."
+      ]
+    },
+    "l10n": {
+      "title": "Automação do fluxo de traduções",
+      "alt": "Diagrama de antes e depois do fluxo de tradução",
+      "summary": "Uma ponte entre engenharia e localização ao longo de um projeto de 8 meses.",
+      "paras": [
+        "Atuando como ponte entre engenharia e localização, defini os requisitos para um fluxo de tradução centralizado e automatizado e conduzi o ciclo de feedback com tradutores e stakeholders.",
+        "Transformei uma lógica de sistema complexa em documentação e conduzi sessões multidisciplinares de “Ask Me Anything” para Produto, Localização e Marketing.",
+        "Isso garantiu que o microcopy criado e validado em pesquisas chegasse de fato aos usuários em todos os idiomas."
+      ]
+    }
+  }
+}

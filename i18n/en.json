@@ -1,0 +1,201 @@
+{
+  "meta_title": "Iara Lucena — Content Designer & UX Writer",
+  "meta_description": "Iara Lucena is a Content Designer and UX Writer in the Netherlands with 10 years of experience creating meaningful, inclusive content for digital products.",
+  "og_description": "I turn complex journeys into clear, human words.",
+  "skip": "Skip to content",
+  "brand_label": "iara creates, home",
+  "nav_label": "Main",
+  "nav_work": "Work",
+  "nav_about": "About",
+  "nav_certs": "Certificates",
+  "nav_speaking": "Speaking",
+  "cta_connect": "Let's connect",
+  "hero_role": "Content Designer & UX Writer",
+  "hero_loc": "The Netherlands",
+  "hero_title": "I turn complex journeys into <span class=\"hl\">clear, human</span> words.",
+  "hero_lead": "Ten years of shaping content for digital products at companies like Booking.com and Bugaboo, with one mission: meaningful, inclusive content that champions clarity across every platform.",
+  "btn_work": "See my work",
+  "btn_story": "Read my story",
+  "stat_1": "years in content",
+  "stat_2": "working languages",
+  "stat_3": "years in the Netherlands",
+  "portrait_alt": "Portrait of Iara Lucena smiling, in front of a blue abstract painting",
+  "badge_open": "Open to new projects",
+  "start_eyebrow": "Start here",
+  "start_title": "Three verses, three ways in",
+  "door1_title": "My work",
+  "door1_poem": "Words in harmony,\nShowcasing skills and essence,\nPortfolios make ideas present.",
+  "door1_more": "Explore projects",
+  "door2_title": "About me",
+  "door2_poem": "Words on screens take flight,\nCrafting journeys with a line,\nCreative life refined.",
+  "door2_more": "Read my story",
+  "door3_title": "Public speaking",
+  "door3_poem": "Mic, stage, and spotlight,\nStories weaving connection,\nVoices coming through.",
+  "door3_more": "Check it out",
+  "marquee_label": "Areas of expertise",
+  "work_eyebrow": "Selected work",
+  "work_title": "Projects I'm proud of",
+  "work_lead": "My latest and proudest contributions as a Content Designer, working with product teams, fellow designers and content people. Pick a focus area to filter.",
+  "tabs_label": "Filter by focus area",
+  "tab_uxui": "UX/UI highlights",
+  "tab_journeys": "User journeys",
+  "tab_strategy": "Strategy & scalability",
+  "work_more": "To see more of my work, <a href=\"mailto:iaralucenatoes@gmail.com?subject=Portfolio%20request\">request my CV and detailed portfolio examples</a>.",
+  "about_eyebrow": "About me",
+  "about_title": "Hi, I'm Iara!",
+  "about_p1": "I'm a Brazilian Content Designer and UX Writer with 10 years of experience. I've been living in the Netherlands for 17+ years and am a mom to two beautiful boys.",
+  "about_p2": "My mission is to create meaningful and inclusive content for digital experiences. I humanize digital journeys by transforming complex business challenges into purposeful, inclusive narratives that champion clarity and accessibility across platforms and devices.",
+  "cv_btn": "View my online CV",
+  "new_tab": "(opens in a new tab)",
+  "lang_title": "Languages",
+  "lang_pt": "Portuguese",
+  "lang_pt_level": "Native",
+  "lang_en": "English",
+  "lang_en_level": "Bilingual · 10+ years professional",
+  "lang_nl": "Dutch",
+  "lang_nl_level": "Fluent",
+  "edu_title": "Education",
+  "edu_degree": "Psychology, Bachelor of Science (BSc)",
+  "edu_valid": "Officially validated by Nuffic in 2026",
+  "edu_chip1": "Consumer Psychology Research Group",
+  "edu_chip2": "Behavioral Lab Assistant",
+  "edu_chip3": "Científico Magazine editing team",
+  "certs_eyebrow": "Courses & certificates",
+  "certs_title": "Always learning",
+  "certs_lead": "Recent certifications, with a focus on designing with and for AI. Tap one to see it up close.",
+  "talks_eyebrow": "Public speaking",
+  "talks_title": "Mic, stage & spotlight",
+  "talks_lead": "Talks, lectures and conversations about content design, strategy and storytelling.",
+  "talk1_kind": "Conference",
+  "talk1_title": "Figma Config 2022",
+  "talk1_desc": "With Bindu: how we organised a collaborative product audit to capture legacy UX, UI and accessibility issues through different experts’ lenses.",
+  "talk2_kind": "Guest lecture",
+  "talk2_title": "Breathing Life into Structure Systems",
+  "talk2_desc": "Content strategy and my work as a Content Designer, at The Hague University of Applied Sciences in 2025 and 2026.",
+  "talk3_kind": "Podcast",
+  "talk3_title": "Content Rookie with Nicole Michaelis",
+  "talk3_desc": "How I started out, what we love about our jobs, storytelling as a content designer, and framing problems.",
+  "talk4_kind": "Interview",
+  "talk4_title": "Why non-native speakers make great UX writers",
+  "talk4_desc": "A conversation with Dragana Milovanovic for UX Content Collective.",
+  "contact_eyebrow": "Let's connect",
+  "contact_title": "Got a journey that needs clearer words?",
+  "back_top": "Back to top",
+  "close_project": "Close project",
+  "prev": "Previous",
+  "next": "Next",
+  "close": "Close",
+  "close_cert": "Close certificate",
+  "cats": {
+    "uxui": "UX/UI highlight",
+    "journeys": "User journeys",
+    "strategy": "Strategy & scalability"
+  },
+  "cert_dates": {
+    "ideo-proto": "Oct 2026",
+    "ideo-story": "Sep 2026",
+    "ixdf": "Jun 2026",
+    "google": "2026",
+    "maven": "Jul 2024"
+  },
+  "skills": [
+    "UX writing",
+    "Content strategy",
+    "Information hierarchy",
+    "Content-led research",
+    "Design systems",
+    "Localization",
+    "AI tooling",
+    "Accessibility"
+  ],
+  "ui": {
+    "count": "{n} projects",
+    "status_all": "Showing all {total} projects · pick a focus area to filter",
+    "status_some": "Showing {n} of {total} · tap again to show all",
+    "read_story": "Read the story",
+    "view_cert": "View certificate",
+    "cert_alt": "Certificate"
+  },
+  "projects": {
+    "buddy": {
+      "title": "Content Design AI Buddy",
+      "alt": "Chat with the Content Design buddy recommending a designer reach out to Iara",
+      "summary": "A hackathon proof of concept that became the design team’s daily content companion.",
+      "paras": [
+        "During a hackathon, a fellow content designer and I created an AI-powered Content Design buddy to test a new way to support teams without dedicated content support.",
+        "After two months of testing and refining its instructions, it launched connected to our content strategy, guidelines, principles and word lists. It recognises design system components, so designers can prompt with text or images for microcopy ideas and strategy insights — and it tells them when to reach out to us.",
+        "Within a month it became the design team’s new best content friend, used daily by product designers and freeing our team for more strategic work."
+      ]
+    },
+    "order": {
+      "title": "Order tracking journey",
+      "alt": "Mobile order details screen with packages and delivery progress",
+      "summary": "End-to-end collaboration from discovery research to delivery.",
+      "paras": [
+        "End-to-end collaboration with the product designer, UX researcher and product team, starting with discovery research, through collaborative solution design and delivery.",
+        "The project included a content-led usability test focused on understanding which content hierarchy would work best on the order details page."
+      ],
+      "caption": "This is an AI-generated design concept for illustration purposes."
+    },
+    "cancel": {
+      "title": "Cancellation flow",
+      "alt": "Cancellation confirmation dialog inviting users to a research conversation",
+      "summary": "Retention through transparency — a respectful, low-friction path.",
+      "paras": [
+        "As the Senior Growth Content Designer, I refined the copy and information hierarchy across the entire cancellation flow.",
+        "The approach was rooted in transparency: clearly outlining the consequences of cancelling while avoiding guilt-tripping language.",
+        "We also created a research touchpoint — thanking users for working together, and inviting them to share their experience so we could learn from it."
+      ]
+    },
+    "wallet": {
+      "title": "Wallet & rewards at Booking.com",
+      "alt": "Booking.com My Wallet and My Rewards screens",
+      "summary": "Making a complex loyalty product feel easy to understand and trustworthy.",
+      "paras": [
+        "As the UX Writer, I wrote the customer-facing copy for one of the first versions of Booking.com’s new travel rewards and wallet system, launching across devices and platforms.",
+        "Working with product teams in the FinTech unit, I kept language consistent across touchpoints and clearly explained how points, refunds and redemptions work.",
+        "Clarity over cleverness: short sentences, plain language and the most important information first — shaped by user testing and A/B results, in close collaboration with design, product and engineering."
+      ]
+    },
+    "agile": {
+      "title": "Agile planning tool beta launch",
+      "alt": "Epics beta planning board, settings and in-product banners",
+      "summary": "Leading UX writing for a brand-new product launch.",
+      "paras": [
+        "I led the UX writing for the launch of a new agile planning tool: core UI copy, in-product promotional banners to drive feature awareness and adoption, and beta release notes for early users.",
+        "I collaborated closely with product teams and technical writers to keep messaging consistent across the product and its documentation, aligning content strategy with discovery and ongoing engagement."
+      ]
+    },
+    "bugaboo": {
+      "title": "Website replatforming at Bugaboo",
+      "alt": "Collage of Bugaboo web pages, shopping cart and order emails",
+      "summary": "Six months, one writer, an entire digital ecosystem.",
+      "paras": [
+        "As the sole writer on the digital team, I led the creation of all digital content during a six-month overhaul of the entire digital ecosystem and website replatforming.",
+        "My role spanned UX writing, product content, SEO optimisation and brand content — creating new content for strategic highlights and refining existing content for the new launch.",
+        "Learnings: sharper project management, and proof of the power of collaborative, end-to-end content design."
+      ]
+    },
+    "library": {
+      "title": "Scaled content design library",
+      "alt": "Searchable microcopy library inside the design tool",
+      "summary": "A self-service library so product teams can write great UI copy on their own.",
+      "paras": [
+        "A strategic initiative to decentralise content design support: a searchable library embedded in the design system, so product designers could prepare designs for critiques and showcases independently.",
+        "I led its creation in the content design team. It moved us away from repetitive microcopy polishing and reclaimed time for high-priority, strategic content work."
+      ]
+    },
+    "l10n": {
+      "title": "Translations workflow automation",
+      "alt": "Before and after diagram of the translation workflow",
+      "summary": "Bridging engineering and localization over an 8-month project.",
+      "paras": [
+        "Acting as the bridge between engineering and localization, I defined requirements for a centralised, automated translation workflow and managed the feedback loop with translators and stakeholders.",
+        "I translated complex system logic into documentation and led cross-functional “Ask Me Anything” sessions for Product, Localization and Marketing.",
+        "It ensured the microcopy created and validated in research actually reached users in every language."
+      ]
+    }
+  },
+  "lang_switch": "Language: English",
+  "lang_nav_label": "Language"
+}
