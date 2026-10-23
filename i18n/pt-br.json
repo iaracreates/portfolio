@@ -1,32 +1,29 @@
 {
   "meta_title": "Iara Lucena — Content Designer e UX Writer",
-  "meta_description": "Iara Lucena é Content Designer e UX Writer nos Países Baixos, com 10 anos de experiência criando conteúdo significativo e inclusivo para produtos digitais.",
+  "meta_description": "Iara Lucena é Content Designer e UX Writer nos Países Baixos, com mais de 10 anos de experiência criando conteúdo significativo e inclusivo para produtos digitais.",
   "og_description": "Transformo jornadas complexas em palavras claras e humanas.",
   "skip": "Pular para o conteúdo",
   "brand_label": "iara creates, página inicial",
   "nav_label": "Principal",
-  "nav_work": "Trabalhos",
-  "nav_about": "Sobre",
+  "nav_work": "Portfólio",
+  "nav_about": "Sobre mim",
   "nav_certs": "Certificados",
   "nav_speaking": "Palestras",
   "cta_connect": "Vamos conversar",
   "lang_switch": "Idioma: Português (Brasil)",
   "lang_nav_label": "Idioma",
-
   "hero_role": "Content Designer & UX Writer",
   "hero_loc": "Países Baixos",
   "hero_title": "Transformo jornadas complexas em palavras <span class=\"hl\">claras e humanas</span>.",
-  "hero_lead": "Dez anos criando conteúdo para produtos digitais em empresas como Booking.com e Bugaboo, com uma missão: conteúdo significativo e inclusivo, que prioriza a clareza em todas as plataformas.",
+  "hero_lead": "Mais de 10 anos criando conteúdo para produtos digitais em empresas como Booking.com, Miro e, agora, Nebius, com uma missão: conteúdo significativo e inclusivo, que prioriza a clareza em todas as plataformas.",
   "btn_work": "Ver meus trabalhos",
   "btn_story": "Conheça minha história",
-  "stat_1": "anos em conteúdo",
+  "stat_1": "anos em UX",
   "stat_2": "idiomas de trabalho",
   "stat_3": "anos nos Países Baixos",
   "portrait_alt": "Retrato de Iara Lucena sorrindo, em frente a uma pintura abstrata azul",
-  "badge_open": "Aberta a novos projetos",
-
-  "start_eyebrow": "Comece por aqui",
-  "start_title": "Três versos, três caminhos",
+  "start_eyebrow": "Em resumo",
+  "start_title": "Escopo de atuação",
   "door1_title": "Meus trabalhos",
   "door1_poem": "Palavras em harmonia,\nMostrando talento e essência,\nO portfólio dá vida às ideias.",
   "door1_more": "Ver projetos",
@@ -37,19 +34,17 @@
   "door3_poem": "Microfone, palco e holofote,\nHistórias tecendo conexões,\nVozes que se fazem ouvir.",
   "door3_more": "Confira",
   "marquee_label": "Áreas de atuação",
-
   "work_eyebrow": "Trabalhos selecionados",
-  "work_title": "Projetos dos quais me orgulho",
+  "work_title": "Projetos em destaque",
   "work_lead": "Minhas contribuições mais recentes e das quais mais me orgulho como Content Designer, ao lado de times de produto, outros designers e profissionais de conteúdo. Escolha uma área para filtrar.",
   "tabs_label": "Filtrar por área",
   "tab_uxui": "Destaques de UX/UI",
   "tab_journeys": "Jornadas do usuário",
   "tab_strategy": "Estratégia e escalabilidade",
-  "work_more": "Para ver mais do meu trabalho, <a href=\"mailto:iaralucenatoes@gmail.com?subject=Pedido%20de%20portf%C3%B3lio\">peça meu currículo e exemplos detalhados de portfólio</a>.",
-
+  "work_more": "Para ver mais do meu trabalho, <a href=\"mailto:iaracreates.info@gmail.com?subject=Pedido%20de%20portf%C3%B3lio\">peça meu currículo e exemplos detalhados de portfólio</a>.",
   "about_eyebrow": "Sobre mim",
   "about_title": "Oi, eu sou a Iara!",
-  "about_p1": "Sou uma Content Designer e UX Writer brasileira com 10 anos de experiência. Moro nos Países Baixos há mais de 17 anos e sou mãe de dois meninos lindos.",
+  "about_p1": "Sou uma Content Designer e UX Writer brasileira com mais de 10 anos de experiência. Moro nos Países Baixos há mais de 17 anos e sou mãe de dois meninos lindos.",
   "about_p2": "Minha missão é criar conteúdo significativo e inclusivo para experiências digitais. Humanizo jornadas digitais transformando desafios de negócio complexos em narrativas inclusivas e com propósito, que priorizam a clareza e a acessibilidade em todas as plataformas e dispositivos.",
   "cv_btn": "Ver meu currículo online",
   "new_tab": "(abre em uma nova aba)",
@@ -66,11 +61,9 @@
   "edu_chip1": "Grupo de Pesquisa em Psicologia do Consumidor",
   "edu_chip2": "Assistente de Laboratório Comportamental",
   "edu_chip3": "Equipe editorial da revista Científico",
-
   "certs_eyebrow": "Cursos e certificados",
-  "certs_title": "Sempre aprendendo",
+  "certs_title": "Aprendizado contínuo",
   "certs_lead": "Certificações recentes, com foco em design com e para IA. Toque em uma para ver de perto.",
-
   "talks_eyebrow": "Palestras",
   "talks_title": "Microfone, palco e holofote",
   "talks_lead": "Palestras, aulas e conversas sobre content design, estratégia e storytelling.",
@@ -86,17 +79,14 @@
   "talk4_kind": "Entrevista",
   "talk4_title": "Por que quem não é nativo em inglês pode ser um ótimo UX writer",
   "talk4_desc": "Uma conversa com Dragana Milovanovic para o UX Content Collective.",
-
   "contact_eyebrow": "Vamos conversar",
   "contact_title": "Tem uma jornada que precisa de palavras mais claras?",
   "back_top": "Voltar ao topo",
-
   "close_project": "Fechar projeto",
   "prev": "Anterior",
   "next": "Próximo",
   "close": "Fechar",
   "close_cert": "Fechar certificado",
-
   "cats": {
     "uxui": "Destaque de UX/UI",
     "journeys": "Jornadas do usuário",
@@ -127,7 +117,6 @@
     "view_cert": "Ver certificado",
     "cert_alt": "Certificado"
   },
-
   "projects": {
     "buddy": {
       "title": "Content Design AI Buddy",

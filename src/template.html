@@ -116,7 +116,6 @@ p{text-wrap:pretty}
 .portrait{position:absolute;inset:13%;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px -30px rgba(26,33,80,0.55)}
 .portrait img{width:100%;height:100%;object-fit:cover}
 .badge{position:absolute;background:#FFFFFF;border-radius:16px;padding:12px 16px;box-shadow:0 16px 36px -16px rgba(26,33,80,0.35);display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#1A2150}
-.badge .b-dot{width:10px;height:10px;border-radius:50%;background:#5BB98C;box-shadow:0 0 0 4px rgba(91,185,140,0.2)}
 @media (prefers-reduced-motion:no-preference){
  .stagger > *{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
  .stagger > *:nth-child(2){animation-delay:.08s}
@@ -467,7 +466,7 @@ p{text-wrap:pretty}
 <a class="btn btn-ghost" href="#about">{{btn_story}}</a>
 </div>
 <div class="stats">
-<div><div class="display stat-n">10</div><div class="stat-l">{{stat_1}}</div></div>
+<div><div class="display stat-n">10+</div><div class="stat-l">{{stat_1}}</div></div>
 <div><div class="display stat-n">3</div><div class="stat-l">{{stat_2}}</div></div>
 <div><div class="display stat-n">17+</div><div class="stat-l">{{stat_3}}</div></div>
 </div>
@@ -477,7 +476,6 @@ p{text-wrap:pretty}
 <div class="ring ring-1" aria-hidden="true"><span class="ring-dot"></span><span class="ring-dot sky"></span></div>
 <div class="ring ring-2" aria-hidden="true"></div>
 <div class="portrait"><img src="{{!base}}images/portrait.png" alt="{{@portrait_alt}}" width="720" height="720"></div>
-<div class="badge" style="left:-4%;bottom:14%"><span class="b-dot" aria-hidden="true"></span>{{badge_open}}</div>
 <div class="badge two" style="right:-2%;top:10%"><span class="type" style="color:#6A5DAE">PT · EN · NL</span></div>
 </div>
 </div>
@@ -631,7 +629,7 @@ p{text-wrap:pretty}
 <div class="c-ring" aria-hidden="true" style="width:380px;height:380px;right:-70px;top:-110px;border:1px dotted rgba(185,174,230,0.45)"></div>
 <div class="reveal" style="font-family:'Lexend',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#B9AEE6">{{contact_eyebrow}}</div>
 <h2 class="display reveal">{{contact_title}}</h2>
-<a class="mail display reveal" href="mailto:iaralucenatoes@gmail.com">iaralucenatoes@gmail.com</a>
+<a class="mail display reveal" href="mailto:iaracreates.info@gmail.com">iaracreates.info@gmail.com</a>
 <div class="reveal" style="display:flex;flex-wrap:wrap;gap:12px">
 <a class="social" href="https://www.linkedin.com/in/iara-lucena-210485104" target="_blank" rel="noopener">LinkedIn <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg><span class="sr-only">{{new_tab}}</span></a>
 <a class="social" href="https://www.instagram.com/iaracreates" target="_blank" rel="noopener">Instagram <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg><span class="sr-only">{{new_tab}}</span></a>

@@ -1,32 +1,29 @@
 {
   "meta_title": "Iara Lucena — Content Designer & UX Writer",
-  "meta_description": "Iara Lucena is Content Designer en UX Writer in Nederland, met 10 jaar ervaring in betekenisvolle, inclusieve content voor digitale producten.",
+  "meta_description": "Iara Lucena is Content Designer en UX Writer in Nederland, met ruim 10 jaar ervaring in betekenisvolle, inclusieve content voor digitale producten.",
   "og_description": "Ik vertaal complexe journeys naar heldere, menselijke woorden.",
   "skip": "Naar de inhoud",
   "brand_label": "iara creates, home",
   "nav_label": "Hoofdmenu",
-  "nav_work": "Werk",
+  "nav_work": "Portfolio",
   "nav_about": "Over mij",
   "nav_certs": "Certificaten",
   "nav_speaking": "Lezingen",
   "cta_connect": "Neem contact op",
   "lang_switch": "Taal: Nederlands",
   "lang_nav_label": "Taal",
-
   "hero_role": "Content Designer & UX Writer",
   "hero_loc": "Nederland",
   "hero_title": "Ik vertaal complexe journeys naar <span class=\"hl\">heldere, menselijke</span> woorden.",
-  "hero_lead": "Tien jaar ervaring met content voor digitale producten, bij bedrijven als Booking.com en Bugaboo. Met één missie: betekenisvolle, inclusieve content die helderheid vooropstelt, op elk platform.",
+  "hero_lead": "Ruim 10 jaar ervaring met content voor digitale producten, bij bedrijven als Booking.com, Miro en nu Nebius. Met één missie: betekenisvolle, inclusieve content die helderheid vooropstelt, op elk platform.",
   "btn_work": "Bekijk mijn werk",
   "btn_story": "Lees mijn verhaal",
-  "stat_1": "jaar in content",
+  "stat_1": "jaar in UX",
   "stat_2": "werktalen",
   "stat_3": "jaar in Nederland",
   "portrait_alt": "Portret van Iara Lucena, glimlachend voor een blauw abstract schilderij",
-  "badge_open": "Open voor nieuwe projecten",
-
-  "start_eyebrow": "Begin hier",
-  "start_title": "Drie verzen, drie ingangen",
+  "start_eyebrow": "In het kort",
+  "start_title": "Mijn werkterrein",
   "door1_title": "Mijn werk",
   "door1_poem": "Woorden in harmonie,\nTonen kunde en essentie,\nEen portfolio maakt ideeën zichtbaar.",
   "door1_more": "Bekijk projecten",
@@ -37,19 +34,17 @@
   "door3_poem": "Microfoon, podium, spotlight,\nVerhalen die verbinden,\nStemmen die doorklinken.",
   "door3_more": "Bekijk ze",
   "marquee_label": "Expertisegebieden",
-
   "work_eyebrow": "Geselecteerd werk",
-  "work_title": "Projecten waar ik trots op ben",
+  "work_title": "Uitgelichte projecten",
   "work_lead": "Mijn recentste en mooiste bijdragen als Content Designer, samen met productteams, collega-designers en contentspecialisten. Kies een focusgebied om te filteren.",
   "tabs_label": "Filter op focusgebied",
   "tab_uxui": "UX/UI-hoogtepunten",
   "tab_journeys": "User journeys",
   "tab_strategy": "Strategie & schaalbaarheid",
-  "work_more": "Meer van mijn werk zien? <a href=\"mailto:iaralucenatoes@gmail.com?subject=Portfolio%20aanvraag\">Vraag mijn cv en uitgebreide portfoliovoorbeelden op</a>.",
-
+  "work_more": "Meer van mijn werk zien? <a href=\"mailto:iaracreates.info@gmail.com?subject=Portfolio%20aanvraag\">Vraag mijn cv en uitgebreide portfoliovoorbeelden op</a>.",
   "about_eyebrow": "Over mij",
   "about_title": "Hoi, ik ben Iara!",
-  "about_p1": "Ik ben een Braziliaanse Content Designer en UX Writer met 10 jaar ervaring. Ik woon al ruim 17 jaar in Nederland en ben moeder van twee prachtige jongens.",
+  "about_p1": "Ik ben een Braziliaanse Content Designer en UX Writer met ruim 10 jaar ervaring. Ik woon al ruim 17 jaar in Nederland en ben moeder van twee prachtige jongens.",
   "about_p2": "Mijn missie is betekenisvolle, inclusieve content maken voor digitale ervaringen. Ik maak digitale journeys menselijker door complexe zakelijke uitdagingen om te zetten in doelgerichte, inclusieve verhalen die helderheid en toegankelijkheid vooropstellen, op elk platform en apparaat.",
   "cv_btn": "Bekijk mijn online cv",
   "new_tab": "(opent in een nieuw tabblad)",
@@ -66,11 +61,9 @@
   "edu_chip1": "Onderzoeksgroep Consumentenpsychologie",
   "edu_chip2": "Assistent in het gedragslab",
   "edu_chip3": "Redactie van Científico Magazine",
-
   "certs_eyebrow": "Cursussen & certificaten",
-  "certs_title": "Altijd blijven leren",
+  "certs_title": "Continu leren",
   "certs_lead": "Recente certificeringen, met de focus op ontwerpen met en voor AI. Tik op een certificaat om het van dichtbij te bekijken.",
-
   "talks_eyebrow": "Lezingen",
   "talks_title": "Microfoon, podium & spotlight",
   "talks_lead": "Lezingen, gastcolleges en gesprekken over content design, strategie en storytelling.",
@@ -86,17 +79,14 @@
   "talk4_kind": "Interview",
   "talk4_title": "Waarom niet-moedertaalsprekers geweldige UX writers zijn",
   "talk4_desc": "Een gesprek met Dragana Milovanovic voor het UX Content Collective.",
-
   "contact_eyebrow": "Laten we kennismaken",
   "contact_title": "Een journey die heldere woorden nodig heeft?",
   "back_top": "Terug naar boven",
-
   "close_project": "Project sluiten",
   "prev": "Vorige",
   "next": "Volgende",
   "close": "Sluiten",
   "close_cert": "Certificaat sluiten",
-
   "cats": {
     "uxui": "UX/UI-hoogtepunt",
     "journeys": "User journeys",
@@ -127,7 +117,6 @@
     "view_cert": "Bekijk certificaat",
     "cert_alt": "Certificaat"
   },
-
   "projects": {
     "buddy": {
       "title": "Content Design AI Buddy",
