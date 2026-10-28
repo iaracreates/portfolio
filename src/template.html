@@ -56,9 +56,9 @@ p{text-wrap:pretty}
 .hdr-in{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#3E4A9A;min-height:44px}
 .brand:hover{color:#1A2150}
-.brand img{width:40px;height:40px;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-.brand:hover img{transform:rotate(-200deg)}
-.brand .type{font-size:24px;white-space:nowrap}
+.brand-logo{height:54px;width:auto;transition:opacity .3s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
+.brand:hover .brand-logo{opacity:.82;transform:translateX(3px)}
+.foot-logo{height:40px;width:auto}
 .navlinks{display:flex;gap:32px}
 .navlink{position:relative;color:#2A2F4F;text-decoration:none;font-size:15px;font-weight:600;padding:12px 2px}
 .navlink::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:2px;background:#8B7FC4;transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
@@ -286,8 +286,7 @@ p{text-wrap:pretty}
  .navlinks{display:none}
  .wrap{padding-left:20px;padding-right:20px}
  .brand{gap:8px}
- .brand img{width:30px;height:30px}
- .brand .type{font-size:19px}
+ .brand-logo{height:40px}
  .hdr .btn{padding:0 16px;font-size:14px}
 
  /* type scale */
@@ -406,9 +405,9 @@ p{text-wrap:pretty}
 /* smallest phones: brand + languages only, contact is one scroll away */
 @media (max-width:374px){
  .hdr .cta{display:none}
- .brand .type{font-size:17px !important}
 }
 @media (max-width:480px){
+ .brand-logo{height:36px}
  .hdr-in{gap:10px}
  .hdr-actions{gap:8px}
  .langsw{padding-left:8px;margin-left:0}
@@ -417,6 +416,9 @@ p{text-wrap:pretty}
  .langsep{padding:0}
  .hero-btns{gap:10px !important}
  .hero-btns .btn{flex:1 1 auto;justify-content:center;padding:0 18px}
+}
+@media (max-width:340px){
+ .brand-logo{height:31px}
 }
 @media (prefers-reduced-motion:reduce){
  .js .reveal{opacity:1;transform:none;transition:none}
@@ -432,8 +434,7 @@ p{text-wrap:pretty}
 <header class="hdr">
 <div class="wrap hdr-in">
 <a href="#top" class="brand" aria-label="{{@brand_label}}">
-<img src="{{!base}}images/logo-mark.png" alt="" width="40" height="40">
-<span class="type">iara creates</span>
+<img class="brand-logo" src="{{!base}}images/logo-iaracreates.png" alt="" width="960" height="208">
 </a>
 <nav class="navlinks" aria-label="{{@nav_label}}">
 <a class="navlink" href="#work">{{nav_work}}</a>
@@ -635,7 +636,7 @@ p{text-wrap:pretty}
 <a class="social" href="https://www.instagram.com/iaracreates" target="_blank" rel="noopener">Instagram <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg><span class="sr-only">{{new_tab}}</span></a>
 </div>
 <div class="foot">
-<span class="type" style="font-size:16px;color:#DCD6F2">iara creates</span>
+<img class="foot-logo" src="{{!base}}images/logo-iaracreates-light.png" alt="iara creates" width="960" height="208">
 <span>© <span id="yr">2026</span> Iara Lucena</span>
 <nav class="foot-lang" aria-label="{{@lang_nav_label}}">
 <a class="footlang" href="{{@href_en}}" hreflang="en" lang="en"{{!current_en}}>English</a>
