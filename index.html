@@ -207,8 +207,9 @@ p{text-wrap:pretty}
 .dw-nav{min-height:44px;padding:0 16px;border-radius:999px;border:0;background:#F1F2FA;color:#3E4A9A;font-family:'Lexend',sans-serif;font-weight:500;font-size:14px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background .25s ease,color .25s ease}
 .dw-nav:hover{background:#3E4A9A;color:#FFFFFF}
 /* quiet link to a project's details page */
-.dw-scroll .dw-more{align-self:flex-start;display:inline-flex;align-items:center;gap:5px;min-height:32px;margin-top:4px;font-size:13px;color:#7A7F9C;text-decoration:underline;text-decoration-color:rgba(122,127,156,0.35);text-underline-offset:3px;transition:color .25s ease,text-decoration-color .25s ease}
-.dw-scroll .dw-more:hover{color:#3E4A9A;text-decoration-color:currentColor}
+.dw-more{position:relative;display:inline-flex;vertical-align:-2px;color:#A3A7BF;transition:color .25s ease}
+.dw-more::before{content:"";position:absolute;inset:-14px -12px}
+.dw-more:hover{color:#3E4A9A}
 .dw-more svg{transition:transform .25s ease}
 .dw-more:hover svg{transform:translateX(3px)}
 
@@ -819,10 +820,13 @@ Voices coming through.</p>
     var body = document.getElementById('dwBody'); body.innerHTML = '';
     p.paras.forEach(function (t) { body.appendChild(el('p', null, t)); });
     if (p.details) {
-      var more = el('a', 'dw-more', T.ui.details_link);
+      /* a quiet arrow at the end of the last sentence; the label is for screen readers only */
+      var more = el('a', 'dw-more');
       more.href = p.details;
-      more.insertAdjacentHTML('beforeend', '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>');
-      body.appendChild(more);
+      more.setAttribute('aria-label', T.ui.details_link);
+      more.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+      body.lastChild.appendChild(document.createTextNode('\u00a0'));
+      body.lastChild.appendChild(more);
     }
     document.getElementById('dwPos').textContent = (current + 1) + ' / ' + list.length;
     document.getElementById('dwScroll').scrollTop = 0;
