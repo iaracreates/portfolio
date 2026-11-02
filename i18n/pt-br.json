@@ -115,7 +115,8 @@
     "status_some": "Mostrando {n} de {total} · toque de novo para ver todos",
     "read_story": "Ler a história",
     "view_cert": "Ver certificado",
-    "cert_alt": "Certificado"
+    "cert_alt": "Certificado",
+    "details_link": "Detalhes do projeto"
   },
   "projects": {
     "buddy": {
@@ -196,5 +197,67 @@
         "Isso garantiu que o microcopy criado e validado em pesquisas chegasse de fato aos usuários em todos os idiomas."
       ]
     }
+  },
+  "details": {
+    "meta_title": "Content Design AI Buddy · Detalhes do projeto · Iara Lucena",
+    "back": "Voltar ao portfólio",
+    "toc_label": "Capítulos",
+    "tag": "Detalhes do projeto · Estratégia e escalabilidade",
+    "title": "Content Design AI Buddy",
+    "lead": "De uma ideia de hackathon a uma ferramenta para todos os product designers.",
+    "fact1_k": "Equipe",
+    "fact1_v": "Cocriado por duas content designers",
+    "fact2_k": "Feito para",
+    "fact2_v": "Content designers e product designers",
+    "fact3_k": "Status",
+    "fact3_v": "Disponível para todos os product designers",
+    "img_alt": "Conversa com o Content Design buddy recomendando que um designer fale com a Iara",
+    "c1": "Visão geral",
+    "c2": "O problema",
+    "c3": "A jornada",
+    "c4": "Estrutura, resultado e aprendizados",
+    "ov_title": "O que é",
+    "ov_p1": "Um assistente de content design com IA generativa que eu e outra content designer criamos, começando em um hackathon, e que foi disponibilizado para todos os product designers.",
+    "ov_p2": "Ele se baseia na nossa estratégia de conteúdo, diretrizes, princípios e listas de palavras, e reconhece os componentes do design system. Os designers podem enviar texto ou imagens e receber ideias de microcopy com a justificativa por trás de cada sugestão. Ele também avisa quando é hora de chamar uma content designer.",
+    "pr_title": "A demanda por content design não parava de crescer",
+    "pr_intro": "A mesma lacuna parecia diferente para cada lado.",
+    "pr_a_k": "Para content designers",
+    "pr_a": "Pequenos pedidos de microcopy competiam com o trabalho estratégico, e vimos uma oportunidade de conectar nossas diretrizes ao design system.",
+    "pr_b_k": "Para os times de produto",
+    "pr_b": "Muitos product designers trabalhavam sem uma content designer dedicada e queriam escrever bons textos por conta própria.",
+    "hmw_k": "Como poderíamos",
+    "hmw": "Como poderíamos escalar o content design sem que as pessoas o deixassem de lado onde ele mais importa?",
+    "jr_title": "Do hackathon ao lançamento",
+    "s1_t": "Hackathon",
+    "s1": "Duas content designers prototiparam o assistente, com instruções conectadas às nossas diretrizes e ao design system.",
+    "s2_t": "Demo para a liderança",
+    "s2": "Uma demo para a liderança de product design para coletar feedback: o que funcionava bem e o que ajustar para atender às necessidades do time de design.",
+    "s3_t": "Lançamento piloto",
+    "s3": "Um piloto com um pequeno grupo de designers selecionados. Coletamos o feedback deles e fizemos pequenas melhorias.",
+    "s4_t": "Lançamento completo",
+    "s4": "A prova de conceito foi disponibilizada para todos os product designers.",
+    "rs_title": "O que estruturamos e o que aprendemos",
+    "setup_k": "Estrutura",
+    "setup": [
+      "Feito para content designers e product designers",
+      "Cobre os 10 principais casos de uso do dia a dia",
+      "Regras de escalonamento para saber quando envolver uma content designer",
+      "Baseado nas nossas diretrizes, com a justificativa de cada sugestão"
+    ],
+    "out_k": "Resultado",
+    "out": [
+      "Disponível para todos os product designers",
+      "Pensado para liberar as content designers de microcopy de rotina",
+      "Feito para ajudar designers sem apoio dedicado a avançar mais rápido"
+    ],
+    "learn_k": "Aprendizados",
+    "learn": [
+      "A IA amplifica suas diretrizes, então aprimore o ofício primeiro",
+      "Desenhe a passagem de bastão, não só as respostas",
+      "Faça em etapas: demo, piloto, ajuste, escala"
+    ],
+    "note": "As regras de escalonamento foram essenciais: o assistente foi pensado para ampliar o content design, não para substituí-lo.",
+    "end": "Quer saber mais sobre este projeto?",
+    "contact": "Entre em contato"
   }
 }

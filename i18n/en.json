@@ -113,7 +113,8 @@
     "status_some": "Showing {n} of {total} · tap again to show all",
     "read_story": "Read the story",
     "view_cert": "View certificate",
-    "cert_alt": "Certificate"
+    "cert_alt": "Certificate",
+    "details_link": "Project details"
   },
   "projects": {
     "buddy": {
@@ -196,5 +197,67 @@
     }
   },
   "lang_switch": "Language: English",
-  "lang_nav_label": "Language"
+  "lang_nav_label": "Language",
+  "details": {
+    "meta_title": "Content Design AI Buddy · Project details · Iara Lucena",
+    "back": "Back to portfolio",
+    "toc_label": "Chapters",
+    "tag": "Project details · Strategy & scalability",
+    "title": "Content Design AI Buddy",
+    "lead": "From a hackathon idea to a tool for every product designer.",
+    "fact1_k": "Team",
+    "fact1_v": "Co-created by two content designers",
+    "fact2_k": "Built for",
+    "fact2_v": "Content designers and product designers",
+    "fact3_k": "Status",
+    "fact3_v": "Available to all product designers",
+    "img_alt": "Chat with the Content Design buddy recommending a designer reach out to Iara",
+    "c1": "Overview",
+    "c2": "The problem",
+    "c3": "The journey",
+    "c4": "Setup, outcome and learnings",
+    "ov_title": "What it is",
+    "ov_p1": "A generative AI content design buddy that a fellow content designer and I built, starting at a hackathon, and rolled out to all product designers.",
+    "ov_p2": "It’s grounded in our content strategy, guidelines, principles and word lists, and it recognises design system components. Designers can prompt it with text or images to get microcopy ideas with the reasoning behind them, and it tells them when it’s time to involve a content designer.",
+    "pr_title": "Demand for content design kept growing",
+    "pr_intro": "The same gap looked different from each side of the table.",
+    "pr_a_k": "For content designers",
+    "pr_a": "Small microcopy requests competed with strategic work, and we saw a chance to connect our guidelines and the design system.",
+    "pr_b_k": "For product teams",
+    "pr_b": "Many product designers worked without a dedicated content designer and wanted to write good copy on their own.",
+    "hmw_k": "How might we",
+    "hmw": "How might we scale content design, without people bypassing it where it matters?",
+    "jr_title": "From hackathon to rollout",
+    "s1_t": "Hackathon",
+    "s1": "Two content designers prototyped the buddy, with instructions connected to our guidelines and the design system.",
+    "s2_t": "Leadership demo",
+    "s2": "A demo for product design leadership to collect feedback: what was working well, and what to adjust to fit the design team’s needs.",
+    "s3_t": "Soft launch",
+    "s3": "A pilot with a small group of selected designers. We collected their feedback and made small improvements.",
+    "s4_t": "Full rollout",
+    "s4": "The proof of concept was made available to all product designers.",
+    "rs_title": "What we set up, and what we learned",
+    "setup_k": "Setup",
+    "setup": [
+      "Built for content designers and product designers",
+      "Covers the top 10 day-to-day use cases",
+      "Escalation rules for when to involve a content designer",
+      "Grounded in our guidelines, with the reasoning behind each suggestion"
+    ],
+    "out_k": "Outcome",
+    "out": [
+      "Available to all product designers",
+      "Designed to free content designers from routine microcopy",
+      "Aimed at helping designers without dedicated support move faster"
+    ],
+    "learn_k": "Learnings",
+    "learn": [
+      "AI amplifies your guidelines, so sharpen the craft first",
+      "Design the hand-off, not just the answers",
+      "Stage it: demo, pilot, adjust, scale"
+    ],
+    "note": "The escalation rules were key: the buddy was designed to extend content design, not replace it.",
+    "end": "Want to hear more about this project?",
+    "contact": "Get in touch"
+  }
 }
