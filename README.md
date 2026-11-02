@@ -14,6 +14,8 @@ A static site in three languages, with no build step on the server:
 - `src/template.html`: the page layout, styles and behaviour, shared by all languages.
 - `i18n/*.json`: every word on the site, one file per language.
 - `build.py`: combines the two into `index.html`, `pt-br/index.html` and `nl/index.html`.
+- `src/details.html`: the AI Buddy "Project details" page. Its text is in the `details` section of each `i18n` file,
+  and `build.py` writes it to `projects/ai-buddy/` (and the same under `pt-br/` and `nl/`).
 - `images/`: shared by all languages.
 
 The generated `index.html` files are committed, so hosting only has to serve the files.
