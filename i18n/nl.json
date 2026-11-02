@@ -233,7 +233,7 @@
     "s2_t": "Demo voor leiding",
     "s2": "Een demo voor de leiding van product design om feedback te verzamelen: wat goed werkte en wat we moesten aanpassen voor de behoeften van het designteam.",
     "s3_t": "Soft launch",
-    "s3": "Een pilot met een kleine groep geselecteerde designers. We verzamelden hun feedback en voerden kleine verbeteringen door.",
+    "s3": "Een pilot met een selecte groep designers. We verzamelden hun feedback en voerden kleine verbeteringen door.",
     "s4_t": "Volledige uitrol",
     "s4": "De proof of concept werd beschikbaar gesteld aan alle productdesigners.",
     "rs_title": "Wat we hebben opgezet en wat we leerden",
@@ -252,6 +252,7 @@
     ],
     "learn_k": "Lessen",
     "learn": [
+      "Teams werken zelfstandig van de eerste schetsen tot vlak voor de lancering; content design houdt de eindgoedkeuring",
       "AI versterkt je richtlijnen, dus scherp eerst je vakmanschap aan",
       "Ontwerp de overdracht, niet alleen de antwoorden",
       "Doe het in fases: demo, pilot, bijsturen, opschalen"
