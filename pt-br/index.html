@@ -110,16 +110,6 @@ p{text-wrap:pretty}
 .ring-dot.sky{background:#7FA8D8;width:10px;height:10px;left:auto;right:-5px;top:30%}
 .portrait{position:absolute;inset:22%;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px -30px rgba(26,33,80,0.55)}
 .portrait img{width:100%;height:100%;object-fit:cover}
-/* illustration bubbles floating around the portrait (decorative) */
-.bubble{position:absolute;border-radius:50%;background:#FFFFFF;box-shadow:0 0 0 1px rgba(62,74,154,0.08),0 18px 36px -18px rgba(26,33,80,0.4);pointer-events:none;display:flex;align-items:center;justify-content:center}
-.bubble img{width:88%;height:88%;object-fit:contain}
-.bubble-1{width:23%;aspect-ratio:1/1;left:3%;top:4%}
-.bubble-2{width:18%;aspect-ratio:1/1;right:4%;top:2%}
-.bubble-3{width:21%;aspect-ratio:1/1;right:0;bottom:12%}
-.bubble-4{width:17%;aspect-ratio:1/1;left:5%;bottom:5%}
-@keyframes floatA{0%,100%{transform:translate(0,0)}50%{transform:translate(4px,-10px)}}
-@keyframes floatB{0%,100%{transform:translate(0,0)}50%{transform:translate(-6px,8px)}}
-@keyframes popIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:no-preference){
  .stagger > *{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
  .stagger > *:nth-child(2){animation-delay:.08s}
@@ -130,12 +120,6 @@ p{text-wrap:pretty}
  .orbit{animation:fadeIn 1.2s .2s ease both}
  .ring-1{animation:spin 60s linear infinite}
  .ring-2{animation:spin 90s linear infinite reverse}
- .bubble{animation:popIn .8s cubic-bezier(.2,.8,.2,1.2) both}
- .bubble img{animation:floatA 7s ease-in-out infinite}
- .bubble-1{animation-delay:.5s}
- .bubble-2{animation-delay:.65s}.bubble-2 img{animation-name:floatB;animation-duration:8s;animation-delay:-2s}
- .bubble-3{animation-delay:.8s}.bubble-3 img{animation-duration:9s;animation-delay:-4s}
- .bubble-4{animation-delay:.95s}.bubble-4 img{animation-name:floatB;animation-duration:7.5s;animation-delay:-1s}
 }
 
 /* doorway cards */
@@ -499,10 +483,6 @@ p{text-wrap:pretty}
 <div class="ring ring-1" aria-hidden="true"><span class="ring-dot"></span><span class="ring-dot sky"></span></div>
 <div class="ring ring-2" aria-hidden="true"></div>
 <div class="portrait"><img src="../images/portrait.png" alt="Retrato de Iara Lucena sorrindo, em frente a uma pintura abstrata azul" width="720" height="720"></div>
-<div class="bubble bubble-1" aria-hidden="true"><img src="../images/illo-uxui.png" alt="" width="835" height="865"></div>
-<div class="bubble bubble-2" aria-hidden="true"><img src="../images/illo-speaking.png" alt="" width="860" height="835"></div>
-<div class="bubble bubble-3" aria-hidden="true"><img src="../images/illo-journeys.png" alt="" width="850" height="770"></div>
-<div class="bubble bubble-4" aria-hidden="true"><img src="../images/illo-strategy.png" alt="" width="900" height="895"></div>
 </div>
 </div>
 </section>
