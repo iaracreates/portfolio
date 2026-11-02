@@ -7,6 +7,10 @@ Reads src/template.html and the text files in i18n/, and writes:
     pt-br/index.html    Português (Brasil)
     nl/index.html       Nederlands
 
+It also builds the AI Buddy "Project details" page from src/details.html and the
+"details" section of each i18n file:
+    projects/ai-buddy/index.html          (and the same under pt-br/ and nl/)
+
 To change wording, edit the matching i18n/*.json file and run the script again.
 Template placeholders: {{key}} = text, {{@key}} = attribute value, {{!key}} = trusted HTML.
 """
@@ -27,6 +31,7 @@ LANGS = [
     ("nl", "nl", "nl", "nl_NL", "Nederlands"),
 ]
 SCRIPT_KEYS = ("projects", "cats", "cert_dates", "skills", "ui")
+DETAILS_PATH = "projects/ai-buddy/"
 
 
 def esc_text(s):
@@ -65,6 +70,8 @@ def main():
     with open(os.path.join(ROOT, "src", "template.html"), encoding="utf-8") as f:
         template = f.read()
     english = load("en")
+    with open(os.path.join(ROOT, "src", "details.html"), encoding="utf-8") as f:
+        details_template = f.read()
 
     for code, folder, html_lang, og_locale, _ in LANGS:
         text = load(code)
@@ -94,6 +101,31 @@ def main():
         with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(render(template, values))
         print("built", os.path.relpath(os.path.join(out_dir, "index.html"), ROOT))
+
+        build_details(details_template, english, text, code, folder, html_lang)
+
+
+def build_details(template, english, text, code, folder, html_lang):
+    """The AI Buddy project details page, one per language."""
+    d = text["details"]
+    gaps = [k for k in english["details"] if k not in d]
+    if gaps:
+        raise SystemExit(f"{code}.json details is missing: {', '.join(gaps)}")
+    lang_prefix = folder + "/" if folder else ""
+    base = "../" * (DETAILS_PATH.count("/") + (1 if folder else 0))
+    values = {k: v for k, v in text.items() if isinstance(v, str)}
+    for k, v in d.items():
+        values["d_" + k] = "".join(f"<li>{esc_text(i)}</li>" for i in v) if isinstance(v, list) else v
+    values.update({"base": base, "htmllang": html_lang, "home": (base + lang_prefix) or "./"})
+    for other_code, other_folder, _, _, _ in LANGS:
+        key = other_code.replace("-", "_")
+        values["href_" + key] = base + (other_folder + "/" if other_folder else "") + DETAILS_PATH
+        values["current_" + key] = ' aria-current="page"' if other_code == code else ""
+    out_dir = os.path.join(ROOT, lang_prefix + DETAILS_PATH)
+    os.makedirs(out_dir, exist_ok=True)
+    with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(render(template, values))
+    print("built", os.path.relpath(os.path.join(out_dir, "index.html"), ROOT))
 
 
 def hreflang_tags():

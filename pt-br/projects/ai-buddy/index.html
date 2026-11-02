@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content Design AI Buddy · Detalhes do projeto · Iara Lucena</title>
+<meta name="description" content="De uma ideia de hackathon a uma ferramenta para todos os product designers.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1A2150">
+<link rel="icon" type="image/png" href="../../../images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#FFFFFF;font-family:'Figtree',system-ui,sans-serif;color:#2A2F4F;line-height:1.6;overflow-x:hidden}
+a{color:#3E4A9A}a:hover{color:#1A2150}
+img{display:block;max-width:100%}
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+.display{font-family:'Lexend','Figtree',sans-serif;letter-spacing:-0.015em;line-height:1.1}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.eyebrow{font-family:'Lexend',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#6A5DAE}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;z-index:200;background:#1A2150;color:#fff;padding:12px 18px;border-radius:12px;text-decoration:none}
+.skip:focus{top:12px;color:#fff}
+:focus-visible{outline:3px solid #8B7FC4;outline-offset:3px}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes drawLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* header (same as the portfolio) */
+.hdr{position:sticky;top:0;z-index:30;background:rgba(255,255,255,0.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(26,33,80,0.08)}
+.hdr-in{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.brand{display:flex;align-items:center;text-decoration:none;min-height:44px}
+.brand-logo{height:54px;width:auto;transition:opacity .3s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
+.brand:hover .brand-logo{opacity:.82;transform:translateX(3px)}
+.hdr-actions{display:flex;align-items:center;gap:10px}
+.back{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-family:'Lexend',sans-serif;font-size:14px;font-weight:500;color:#3E4A9A;text-decoration:none}
+.back svg{transition:transform .25s ease}
+.back:hover svg{transform:translateX(-4px)}
+.langsw{display:flex;align-items:center;padding-left:18px;margin-left:6px;border-left:1px solid rgba(26,33,80,0.14)}
+.langlink{position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:36px;min-height:44px;padding:0 4px;font-family:'Lexend',sans-serif;font-size:13px;font-weight:500;letter-spacing:0.16em;text-indent:0.16em;color:#7A7F9C;text-decoration:none;transition:color .25s ease}
+.langlink::after{content:"";position:absolute;left:8px;right:8px;bottom:6px;height:2px;border-radius:2px;background:#3E4A9A;transform:scaleX(0);transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.langlink:hover{color:#1A2150}
+.langlink:hover::after{transform:scaleX(.5)}
+.langlink[aria-current="page"]{color:#1A2150;font-weight:600}
+.langlink[aria-current="page"]::after{transform:scaleX(1)}
+.langsep{color:#C3C6DA;font-size:13px;padding:0 2px;user-select:none}
+
+/* hero */
+.hero{background:linear-gradient(180deg,#FFFFFF 0%,#F3F2FB 100%)}
+.hero-in{padding-top:72px;padding-bottom:88px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:56px;align-items:center}
+.stagger{display:flex;flex-direction:column;gap:22px}
+.hero h1{margin:0;font-size:clamp(36px,4.6vw,58px);font-weight:600;color:#1A2150}
+.hero .lead{margin:0;font-size:20px;color:#4A4F6E}
+.tag{display:inline-block;align-self:flex-start;font-family:'Lexend',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#64579F;background:#ECE8F7;padding:5px 11px;border-radius:999px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:16px 28px;margin:6px 0 0;padding:20px 0 0;border-top:1px solid rgba(26,33,80,0.1)}
+.facts div{display:flex;flex-direction:column;gap:2px}
+.facts dt{font-family:'Lexend',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#6A5DAE}
+.facts dd{margin:0;font-size:15.5px;color:#2A2F4F}
+.shot{background:#EEF0FA;border-radius:24px;padding:26px;display:flex;justify-content:center}
+.shot img{max-height:460px;width:auto;object-fit:contain;border-radius:12px;box-shadow:0 20px 40px -24px rgba(26,33,80,0.45)}
+@media (prefers-reduced-motion:no-preference){
+ .stagger > *{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
+ .stagger > *:nth-child(2){animation-delay:.08s}
+ .stagger > *:nth-child(3){animation-delay:.16s}
+ .stagger > *:nth-child(4){animation-delay:.24s}
+ .hero .shot{animation:fadeUp 1s .2s cubic-bezier(.2,.7,.2,1) both}
+}
+
+/* chapter index */
+.toc{display:flex;flex-wrap:wrap;gap:10px;padding:28px 0 0;margin:0;list-style:none}
+.toc a{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px 0 8px;border-radius:999px;background:#FFFFFF;box-shadow:inset 0 0 0 1px rgba(26,33,80,0.1);font-family:'Lexend',sans-serif;font-size:14px;font-weight:500;color:#2A2F4F;text-decoration:none;transition:box-shadow .25s ease,color .25s ease,transform .25s ease}
+.toc a:hover{color:#1A2150;box-shadow:inset 0 0 0 1.5px #8B7FC4;transform:translateY(-2px)}
+.toc .n{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#ECEEF9;color:#3E4A9A;font-size:12px;font-weight:600}
+
+/* chapters */
+.chap{padding:96px 0}
+.chap + .chap{border-top:1px solid rgba(26,33,80,0.07)}
+.chap-alt{background:#F7F7FC}
+.chap-head{display:flex;flex-direction:column;gap:12px;max-width:760px;margin-bottom:40px}
+.chap-head .eyebrow{display:flex;align-items:center;gap:12px}
+.chap-head .eyebrow span{color:#8B7FC4}
+.chap h2{margin:0;font-size:clamp(30px,3.6vw,44px);font-weight:600;color:#1A2150}
+.chap .intro{margin:0;font-size:18px;color:#4A4F6E;max-width:760px}
+.prose{max-width:760px;display:flex;flex-direction:column;gap:18px}
+.prose p{margin:0;font-size:18px;color:#3A3F5E}
+
+/* two sides of the problem */
+.sides{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:22px}
+.side{background:#FFFFFF;border-radius:24px;padding:30px;box-shadow:0 0 0 1px rgba(26,33,80,0.08);display:flex;flex-direction:column;gap:14px}
+.side-k{display:flex;align-items:center;gap:12px;font-family:'Lexend',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#3E4A9A}
+.side-k .ic{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#ECEEF9;color:#3E4A9A;flex-shrink:0}
+.side:nth-child(2) .side-k{color:#2D6AA3}
+.side:nth-child(2) .ic{background:#E1ECF8;color:#2D6AA3}
+.side p{margin:0;font-size:17px;color:#3A3F5E}
+.hmw{margin:40px 0 0;padding:36px 40px;border-radius:24px;background:#1A2150;color:#FFFFFF;position:relative;overflow:hidden}
+.hmw .eyebrow{color:#B9AEE6}
+.hmw p{margin:10px 0 0;font-family:'Lexend',sans-serif;font-size:clamp(22px,2.6vw,32px);font-weight:500;line-height:1.3;letter-spacing:-0.01em;max-width:900px}
+.hmw::after{content:"";position:absolute;width:320px;height:320px;right:-110px;top:-140px;border-radius:50%;border:1.5px dashed rgba(157,190,230,0.35);pointer-events:none}
+
+/* journey */
+.stages{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;position:relative}
+.stages::before{content:"";position:absolute;top:27px;left:28px;right:12%;height:3px;border-radius:3px;background:linear-gradient(90deg,#B9C9EC,#8B7FC4 60%,#1A2150);transform-origin:left}
+.js .stages::before{transform:scaleX(0);transition:transform 1.4s cubic-bezier(.2,.7,.2,1) .2s}
+.js .stages.in::before{transform:scaleX(1)}
+.stage{position:relative;display:flex;flex-direction:column;gap:10px}
+.stage .dot{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Lexend',sans-serif;font-size:20px;font-weight:600;box-shadow:0 0 0 8px #F7F7FC;position:relative}
+.stage:nth-child(1) .dot{background:#DCE6F7;color:#1A2150}
+.stage:nth-child(2) .dot{background:#B9AEE6;color:#1A2150}
+.stage:nth-child(3) .dot{background:#3E4A9A;color:#FFFFFF}
+.stage:nth-child(4) .dot{background:#1A2150;color:#FFFFFF;box-shadow:0 0 0 8px #F7F7FC,0 0 0 11px #8B7FC4}
+.stage h3{margin:12px 0 0;font-size:21px;font-weight:600;color:#1A2150}
+.stage p{margin:0;font-size:16px;color:#4A4F6E}
+
+/* setup / outcome / learnings */
+.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:22px;align-items:stretch}
+.box{border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(26,33,80,0.08)}
+.box h3{margin:0;font-family:'Lexend',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#6A5DAE}
+.box ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.box li{position:relative;padding-left:22px;font-size:16.5px;color:#3A3F5E;line-height:1.5}
+.box li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:#B9AEE6}
+.box-dark{background:#3E4A9A;box-shadow:none}
+.box-dark h3{color:#DCD6F2}
+.box-dark li{color:#FFFFFF}
+.box-dark li::before{background:#9DBEE6}
+.note{margin:32px 0 0;padding:4px 0 4px 20px;border-left:3px solid #8B7FC4;font-size:18px;font-style:italic;color:#3A3F5E;max-width:820px}
+
+/* closing */
+.end{padding:64px 0 96px}
+.end-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:32px 36px;border-radius:24px;background:#F3F2FB}
+.end-in p{margin:0;font-family:'Lexend',sans-serif;font-size:20px;font-weight:500;color:#1A2150}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font-family:'Lexend',sans-serif;font-weight:500;font-size:15px;text-decoration:none;white-space:nowrap;transition:transform .25s ease,background .25s ease,color .25s ease,box-shadow .25s ease}
+.btn-solid{background:#3E4A9A;color:#FFFFFF}
+.btn-solid:hover{background:#1A2150;color:#FFFFFF;transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(26,33,80,0.6)}
+.btn-ghost{background:#FFFFFF;color:#3E4A9A;box-shadow:inset 0 0 0 1.5px rgba(62,74,154,0.35)}
+.btn-ghost:hover{color:#1A2150;box-shadow:inset 0 0 0 1.5px #1A2150;transform:translateY(-2px)}
+
+/* footer */
+.foot{background:#1A2150;color:#C9CDE6;padding:36px 0}
+.foot-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;font-size:14px}
+.foot-logo{height:40px;width:auto}
+.foot-lang{display:flex;flex-wrap:wrap;gap:4px 16px}
+.footlang{color:#DCD6F2;min-height:44px;display:inline-flex;align-items:center;text-decoration:none}
+.footlang:hover,.footlang[aria-current="page"]{color:#FFFFFF}
+.footlang[aria-current="page"]{font-weight:600}
+
+@media (max-width:900px){
+ .stages{grid-template-columns:1fr;gap:28px}
+ .stages::before{top:28px;bottom:28px;left:27px;right:auto;width:3px;height:auto;background:linear-gradient(180deg,#B9C9EC,#8B7FC4 60%,#1A2150);transform-origin:top}
+ .js .stages::before{transform:scaleY(0)}
+ .js .stages.in::before{transform:scaleY(1)}
+ .stage{display:grid;grid-template-columns:56px minmax(0,1fr);column-gap:20px;row-gap:4px}
+ .stage .dot{grid-row:1 / span 2}
+ .stage h3{margin:12px 0 0}
+}
+@media (max-width:720px){
+ .wrap{padding:0 20px}
+ .hdr-in{height:64px;gap:12px}
+ .brand-logo{height:36px}
+ .back-t{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+ .back{width:44px;justify-content:center}
+ .hdr-actions{gap:4px}
+ .langsw{padding-left:8px;margin-left:0}
+ .langlink{min-width:30px;padding:0 2px;font-size:12.5px;letter-spacing:0.1em;text-indent:0.1em}
+ .langlink::after{left:6px;right:6px}
+ .langsep{padding:0}
+ .hero-in{padding-top:40px;padding-bottom:56px;gap:32px}
+ .hero h1{font-size:clamp(30px,8.4vw,38px)}
+ .hero .lead{font-size:17px}
+ .facts dd{font-size:15px}
+ .shot{padding:14px;border-radius:20px}
+ .shot img{max-height:320px}
+ .toc{gap:8px}
+ .toc a{font-size:13px;padding:0 14px 0 6px}
+ .chap{padding:64px 0}
+ .chap-head{margin-bottom:28px}
+ .chap h2{font-size:clamp(26px,7vw,32px)}
+ .chap .intro,.prose p{font-size:16.5px}
+ .side,.box{padding:22px;border-radius:20px}
+ .side p{font-size:16px}
+ .box li{font-size:15.5px}
+ .hmw{padding:26px 24px;border-radius:20px;margin-top:28px}
+ .hmw p{font-size:21px}
+ .stage h3{font-size:19px}
+ .stage p{font-size:15px}
+ .note{font-size:16.5px}
+ .end{padding:40px 0 64px}
+ .end-in{padding:24px;border-radius:20px}
+ .end-in p{font-size:18px}
+ .btns,.btn{width:100%}
+ .btn{justify-content:center}
+ .foot-in{flex-direction:column;align-items:flex-start;gap:4px}
+}
+@media (prefers-reduced-motion:reduce){
+ .js .reveal{opacity:1;transform:none;transition:none}
+ .js .stages::before{transform:none;transition:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="hdr">
+<div class="wrap hdr-in">
+<a href="../../../pt-br/" class="brand" aria-label="iara creates, página inicial">
+<img class="brand-logo" src="../../../images/logo-iaracreates.png" alt="" width="960" height="208">
+</a>
+<div class="hdr-actions">
+<a class="back" href="../../../pt-br/#work"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="back-t">Voltar ao portfólio</span></a>
+<nav class="langsw" aria-label="Idioma">
+<a class="langlink" href="../../../projects/ai-buddy/" hreflang="en" lang="en"><span class="sr-only">English</span><span aria-hidden="true">EN</span></a>
+<span class="langsep" aria-hidden="true">|</span>
+<a class="langlink" href="../../../pt-br/projects/ai-buddy/" hreflang="pt-BR" lang="pt-BR" aria-current="page"><span class="sr-only">Português (Brasil)</span><span aria-hidden="true">PT</span></a>
+<span class="langsep" aria-hidden="true">|</span>
+<a class="langlink" href="../../../nl/projects/ai-buddy/" hreflang="nl" lang="nl"><span class="sr-only">Nederlands</span><span aria-hidden="true">NL</span></a>
+</nav>
+</div>
+</div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+<div class="wrap">
+<div class="hero-in">
+<div class="stagger">
+<span class="tag">Detalhes do projeto · Estratégia e escalabilidade</span>
+<h1 class="display">Content Design AI Buddy</h1>
+<p class="lead">De uma ideia de hackathon a uma ferramenta para todos os product designers.</p>
+<dl class="facts">
+<div><dt>Equipe</dt><dd>Cocriado por duas content designers</dd></div>
+<div><dt>Feito para</dt><dd>Content designers e product designers</dd></div>
+<div><dt>Status</dt><dd>Disponível para todos os product designers</dd></div>
+</dl>
+</div>
+<div class="shot"><img src="../../../images/work-buddy.webp" alt="Conversa com o Content Design buddy recomendando que um designer fale com a Iara"></div>
+</div>
+<nav aria-label="Capítulos">
+<ol class="toc">
+<li><a href="#overview"><span class="n">01</span>Visão geral</a></li>
+<li><a href="#problem"><span class="n">02</span>O problema</a></li>
+<li><a href="#journey"><span class="n">03</span>A jornada</a></li>
+<li><a href="#results"><span class="n">04</span>Estrutura, resultado e aprendizados</a></li>
+</ol>
+</nav>
+<div style="height:56px"></div>
+</div>
+</section>
+
+<section class="chap" id="overview">
+<div class="wrap">
+<div class="chap-head reveal">
+<div class="eyebrow"><span>01</span>Visão geral</div>
+<h2 class="display">O que é</h2>
+</div>
+<div class="prose reveal">
+<p>Um assistente de content design com IA generativa que eu e outra content designer criamos, começando em um hackathon, e que foi disponibilizado para todos os product designers.</p>
+<p>Ele se baseia na nossa estratégia de conteúdo, diretrizes, princípios e listas de palavras, e reconhece os componentes do design system. Os designers podem enviar texto ou imagens e receber ideias de microcopy com a justificativa por trás de cada sugestão. Ele também avisa quando é hora de chamar uma content designer.</p>
+</div>
+</div>
+</section>
+
+<section class="chap chap-alt" id="problem">
+<div class="wrap">
+<div class="chap-head reveal">
+<div class="eyebrow"><span>02</span>O problema</div>
+<h2 class="display">A demanda por content design não parava de crescer</h2>
+<p class="intro">A mesma lacuna parecia diferente para cada lado.</p>
+</div>
+<div class="sides">
+<div class="side reveal">
+<div class="side-k"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></span>Para content designers</div>
+<p>Pequenos pedidos de microcopy competiam com o trabalho estratégico, e vimos uma oportunidade de conectar nossas diretrizes ao design system.</p>
+</div>
+<div class="side reveal">
+<div class="side-k"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2.5"/><path d="M8 21h8M12 17v4"/></svg></span>Para os times de produto</div>
+<p>Muitos product designers trabalhavam sem uma content designer dedicada e queriam escrever bons textos por conta própria.</p>
+</div>
+</div>
+<div class="hmw reveal">
+<div class="eyebrow">Como poderíamos</div>
+<p>Como poderíamos escalar o content design sem que as pessoas o deixassem de lado onde ele mais importa?</p>
+</div>
+</div>
+</section>
+
+<section class="chap" id="journey">
+<div class="wrap">
+<div class="chap-head reveal">
+<div class="eyebrow"><span>03</span>A jornada</div>
+<h2 class="display">Do hackathon ao lançamento</h2>
+</div>
+<ol class="stages reveal">
+<li class="stage"><span class="dot" aria-hidden="true">1</span><h3 class="display">Hackathon</h3><p>Duas content designers prototiparam o assistente, com instruções conectadas às nossas diretrizes e ao design system.</p></li>
+<li class="stage"><span class="dot" aria-hidden="true">2</span><h3 class="display">Demo para a liderança</h3><p>Uma demo para a liderança de product design para coletar feedback: o que funcionava bem e o que ajustar para atender às necessidades do time de design.</p></li>
+<li class="stage"><span class="dot" aria-hidden="true">3</span><h3 class="display">Lançamento piloto</h3><p>Um piloto com um pequeno grupo de designers selecionados. Coletamos o feedback deles e fizemos pequenas melhorias.</p></li>
+<li class="stage"><span class="dot" aria-hidden="true">4</span><h3 class="display">Lançamento completo</h3><p>A prova de conceito foi disponibilizada para todos os product designers.</p></li>
+</ol>
+</div>
+</section>
+
+<section class="chap chap-alt" id="results">
+<div class="wrap">
+<div class="chap-head reveal">
+<div class="eyebrow"><span>04</span>Estrutura, resultado e aprendizados</div>
+<h2 class="display">O que estruturamos e o que aprendemos</h2>
+</div>
+<div class="trio">
+<div class="box reveal"><h3>Estrutura</h3><ul><li>Feito para content designers e product designers</li><li>Cobre os 10 principais casos de uso do dia a dia</li><li>Orientações sobre quando envolver uma content designer e pedir ajuda, se necessário</li><li>Baseado nas nossas diretrizes, com a justificativa de cada sugestão</li></ul></div>
+<div class="box box-dark reveal"><h3>Resultado</h3><ul><li>Disponível para todos os product designers</li><li>Pensado para liberar as content designers de microcopy de rotina</li><li>Feito para ajudar designers sem apoio dedicado a avançar mais rápido</li></ul></div>
+<div class="box reveal"><h3>Aprendizados</h3><ul><li>A IA amplifica suas diretrizes, então aprimore o ofício primeiro</li><li>Desenhe a passagem de bastão, não só as respostas</li><li>Faça em etapas: demo, piloto, ajuste, escala</li></ul></div>
+</div>
+<p class="note reveal">As regras de escalonamento foram essenciais: o assistente foi pensado para ampliar o content design, não para substituí-lo.</p>
+</div>
+</section>
+
+<section class="chap end">
+<div class="wrap">
+<div class="end-in reveal">
+<p>Quer saber mais sobre este projeto?</p>
+<div class="btns">
+<a class="btn btn-ghost" href="../../../pt-br/#work"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Voltar ao portfólio</a>
+<a class="btn btn-solid" href="mailto:iaracreates.info@gmail.com">Entre em contato</a>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="foot">
+<div class="wrap foot-in">
+<img class="foot-logo" src="../../../images/logo-iaracreates-light.png" alt="iara creates" width="960" height="208">
+<span>© 2026 Iara Lucena</span>
+<nav class="foot-lang" aria-label="Idioma">
+<a class="footlang" href="../../../projects/ai-buddy/" hreflang="en" lang="en">English</a>
+<a class="footlang" href="../../../pt-br/projects/ai-buddy/" hreflang="pt-BR" lang="pt-BR" aria-current="page">Português</a>
+<a class="footlang" href="../../../nl/projects/ai-buddy/" hreflang="nl" lang="nl">Nederlands</a>
+</nav>
+</div>
+</footer>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach(function (e) { io.observe(e); });
+})();
+</script>
+</body>
+</html>
