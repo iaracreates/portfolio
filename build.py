@@ -7,9 +7,10 @@ Reads src/template.html and the text files in i18n/, and writes:
     pt-br/index.html    Português (Brasil)
     nl/index.html       Nederlands
 
-It also builds the AI Buddy "Project details" page from src/details.html and the
-"details" section of each i18n file:
-    projects/ai-buddy/index.html          (and the same under pt-br/ and nl/)
+It can also build "Project details" pages from src/details.html, one design shared by
+any project listed in DETAILS_PAGES below, with its text in the "details" section of each
+i18n file. Only pages marked published=True are built and linked from the project drawer;
+unpublished ones keep their text and settings but are removed from the site.
 
 To change wording, edit the matching i18n/*.json file and run the script again.
 Template placeholders: {{key}} = text, {{@key}} = attribute value, {{!key}} = trusted HTML.
@@ -31,7 +32,13 @@ LANGS = [
     ("nl", "nl", "nl", "nl_NL", "Nederlands"),
 ]
 SCRIPT_KEYS = ("projects", "cats", "cert_dates", "skills", "ui")
-DETAILS_PATH = "projects/ai-buddy/"
+
+# Project details pages. To publish one, set "published": True and run the build again.
+# To add another project: copy the "buddy" block in each i18n file's "details" section,
+# give it the project's id, and add an entry here.
+DETAILS_PAGES = {
+    "buddy": {"path": "projects/ai-buddy/", "image": "work-buddy.webp", "published": False},
+}
 
 
 def esc_text(s):
@@ -88,6 +95,7 @@ def main():
             "htmllang": html_lang,
             "og_locale": og_locale,
             "json": json.dumps(script_data, ensure_ascii=False).replace("</", "<\\/"),
+            "details_json": json.dumps({pid: c["path"] for pid, c in DETAILS_PAGES.items() if c["published"]}),
             "hreflang": hreflang_tags(),
         })
         for other_code, other_folder, _, _, name in LANGS:
@@ -102,26 +110,39 @@ def main():
             f.write(render(template, values))
         print("built", os.path.relpath(os.path.join(out_dir, "index.html"), ROOT))
 
-        build_details(details_template, english, text, code, folder, html_lang)
+        for pid, conf in DETAILS_PAGES.items():
+            build_details(details_template, english, text, code, folder, html_lang, pid, conf)
 
 
-def build_details(template, english, text, code, folder, html_lang):
-    """The AI Buddy project details page, one per language."""
-    d = text["details"]
-    gaps = [k for k in english["details"] if k not in d]
+def build_details(template, english, text, code, folder, html_lang, pid, conf):
+    """One project details page in one language, or its removal when unpublished."""
+    path = conf["path"]
+    d = text["details"][pid]
+    gaps = [k for k in english["details"][pid] if k not in d]
     if gaps:
-        raise SystemExit(f"{code}.json details is missing: {', '.join(gaps)}")
+        raise SystemExit(f"{code}.json details.{pid} is missing: {', '.join(gaps)}")
     lang_prefix = folder + "/" if folder else ""
-    base = "../" * (DETAILS_PATH.count("/") + (1 if folder else 0))
+    out_dir = os.path.join(ROOT, lang_prefix + path)
+    if not conf["published"]:
+        page = os.path.join(out_dir, "index.html")
+        if os.path.exists(page):
+            os.remove(page)
+            print("removed", os.path.relpath(page, ROOT), "(unpublished)")
+        # tidy up the now-empty folders, e.g. projects/ai-buddy/ and projects/
+        d_ = out_dir.rstrip("/")
+        while d_.startswith(os.path.join(ROOT, lang_prefix + "projects")) and os.path.isdir(d_) and not os.listdir(d_):
+            os.rmdir(d_)
+            d_ = os.path.dirname(d_)
+        return
+    base = "../" * (path.count("/") + (1 if folder else 0))
     values = {k: v for k, v in text.items() if isinstance(v, str)}
     for k, v in d.items():
         values["d_" + k] = "".join(f"<li>{esc_text(i)}</li>" for i in v) if isinstance(v, list) else v
-    values.update({"base": base, "htmllang": html_lang, "home": (base + lang_prefix) or "./"})
+    values.update({"base": base, "htmllang": html_lang, "home": (base + lang_prefix) or "./", "d_image": conf["image"]})
     for other_code, other_folder, _, _, _ in LANGS:
         key = other_code.replace("-", "_")
-        values["href_" + key] = base + (other_folder + "/" if other_folder else "") + DETAILS_PATH
+        values["href_" + key] = base + (other_folder + "/" if other_folder else "") + path
         values["current_" + key] = ' aria-current="page"' if other_code == code else ""
-    out_dir = os.path.join(ROOT, lang_prefix + DETAILS_PATH)
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
         f.write(render(template, values))

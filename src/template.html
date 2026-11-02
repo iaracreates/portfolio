@@ -695,11 +695,12 @@ p{text-wrap:pretty}
 (function () {
   var T = {{!json}};
   var BASE = '{{!base}}';
+  var DETAILS = {{!details_json}}; /* published project details pages, set in build.py */
   function fmt(s, v) { return s.replace(/\{(\w+)\}/g, function (m, k) { return v[k]; }); }
   function merge(o, t) { for (var k in t) o[k] = t[k]; return o; }
 
   var PROJECTS = [
-    { id: 'buddy', cats: ['strategy'], img: 'work-buddy.webp', details: 'projects/ai-buddy/' },
+    { id: 'buddy', cats: ['strategy'], img: 'work-buddy.webp' },
     { id: 'order', cats: ['journeys', 'uxui'], img: 'work-order.webp' },
     { id: 'cancel', cats: ['journeys', 'uxui'], img: 'work-cancel.webp' },
     { id: 'wallet', cats: ['uxui'], img: 'work-wallet.webp' },
@@ -709,6 +710,7 @@ p{text-wrap:pretty}
     { id: 'l10n', cats: ['strategy'], img: 'work-l10n.webp' }
   ].map(function (p) {
     merge(p, T.projects[p.id]);
+    p.details = DETAILS[p.id];
     p.tag = T.cats[p.cats[0]];
     p.img = BASE + 'images/' + p.img;
     return p;
