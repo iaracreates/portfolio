@@ -233,7 +233,7 @@
     "s2_t": "Leadership demo",
     "s2": "A demo for product design leadership to collect feedback: what was working well, and what to adjust to fit the design team’s needs.",
     "s3_t": "Soft launch",
-    "s3": "A pilot with a small group of selected designers. We collected their feedback and made small improvements.",
+    "s3": "A pilot with a select group of designers. We collected their feedback and made small improvements.",
     "s4_t": "Full rollout",
     "s4": "The proof of concept was made available to all product designers.",
     "rs_title": "What we set up, and what we learned",
@@ -252,6 +252,7 @@
     ],
     "learn_k": "Learnings",
     "learn": [
+      "Teams work independently from first sketches to pre-launch; content design keeps final approval",
       "AI amplifies your guidelines, so sharpen the craft first",
       "Design the hand-off, not just the answers",
       "Stage it: demo, pilot, adjust, scale"

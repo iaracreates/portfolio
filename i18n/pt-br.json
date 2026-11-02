@@ -233,7 +233,7 @@
     "s2_t": "Demo para a liderança",
     "s2": "Uma demo para a liderança de product design para coletar feedback: o que funcionava bem e o que ajustar para atender às necessidades do time de design.",
     "s3_t": "Lançamento piloto",
-    "s3": "Um piloto com um pequeno grupo de designers selecionados. Coletamos o feedback deles e fizemos pequenas melhorias.",
+    "s3": "Um piloto com um grupo seleto de designers. Coletamos o feedback deles e fizemos pequenas melhorias.",
     "s4_t": "Lançamento completo",
     "s4": "A prova de conceito foi disponibilizada para todos os product designers.",
     "rs_title": "O que estruturamos e o que aprendemos",
@@ -252,6 +252,7 @@
     ],
     "learn_k": "Aprendizados",
     "learn": [
+      "Os times trabalham de forma independente dos primeiros esboços até o pré-lançamento; o content design mantém a aprovação final",
       "A IA amplifica suas diretrizes, então aprimore o ofício primeiro",
       "Desenhe a passagem de bastão, não só as respostas",
       "Faça em etapas: demo, piloto, ajuste, escala"
