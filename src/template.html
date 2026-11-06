@@ -125,6 +125,10 @@ p{text-wrap:pretty}
 /* doorway cards */
 .section{padding-top:112px;padding-bottom:112px}
 .sec-head{display:flex;flex-direction:column;gap:14px;max-width:640px}
+/* quiet note under a section intro */
+.sec-note{margin:2px 0 0;padding-left:14px;border-left:2px solid #C9C2E8;font-size:15px;line-height:1.55;color:#6B7090}
+.sec-note a{color:#3E4A9A;text-underline-offset:3px;text-decoration-color:rgba(62,74,154,0.4)}
+.sec-note a:hover{color:#1A2150;text-decoration-color:currentColor}
 .doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
 .door{background:#F5F6FC;border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:16px;text-decoration:none;color:#2A2F4F;transition:background .35s ease,transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s ease}
 .door:hover{background:#FFFFFF;color:#2A2F4F;transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(26,33,80,0.35)}
@@ -300,6 +304,7 @@ p{text-wrap:pretty}
  .loc{display:block;margin-top:3px}
  .h2{font-size:clamp(28px,7.6vw,34px)}
  .lead{font-size:16.5px}
+ .sec-note{font-size:14.5px;padding-left:12px}
  .sec-head{gap:12px}
 
  /* hero */
@@ -524,6 +529,7 @@ p{text-wrap:pretty}
 <div class="eyebrow">{{work_eyebrow}}</div>
 <h2 class="display h2">{{work_title}}</h2>
 <p class="lead">{{work_lead}}</p>
+<p class="sec-note">{{!work_private}}</p>
 </div>
 <div style="display:flex;flex-direction:column;gap:14px">
 <div role="group" aria-label="{{@tabs_label}}" class="tabs reveal" id="tabs">
