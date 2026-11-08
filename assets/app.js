@@ -257,7 +257,7 @@ function cap(s){return s?s.charAt(0).toUpperCase()+s.slice(1):s}
 
 var COLORS={Blue:"#2E5C9A",Red:"#C0392B",Pink:"#E89AB0",Orange:"#E67E22",Yellow:"#E8D21D",Green:"#4F8A4B",Purple:"#7D5BA6",Black:"#1A1A1A",Neutral:"#E8E2D6",Multicolour:"multi"};
 var CATKEYS=["bags","crochet"].concat(SHOW.prints?["prints"]:[]);
-var FEATURES=["Reversible","With pouch","Pockets","Water-resistant","Thrifted fabric","One of a kind"].concat(SHOW.custom?["Made to order"]:[]);
+var FEATURES=["Reversible","With pouch","Pockets","Water-resistant","Thrifted fabric"].concat(SHOW.custom?["Made to order"]:[]);
 var SIZES=["40 × 50 cm","50 × 60 cm"];
 document.querySelectorAll("[data-flag]").forEach(function(el){if(!SHOW[el.dataset.flag])el.remove()});
 var byId={};P.forEach(function(p){byId[p.id]=p});
@@ -287,7 +287,7 @@ function collage(list,cls){
 }
 function A(id){var p=byId[id],im=p&&archOf(p);return im?{src:im.src,arch:true,alt:L(p,"name")}:null}
 function C(id){var p=byId[id],im=p&&cutOf(p);return im?{src:im.src,blend:im.blend,alt:L(p,"name")}:null}
-function badge(p){return p.features.indexOf("Made to order")>=0?t("badge.mto"):(p.features.indexOf("One of a kind")>=0?t("badge.ook"):"")}
+function badge(p){return p.features.indexOf("Made to order")>=0?t("badge.mto"):""}
 function card(p,i){
   var pick=pickCard(p,i||0),a=pick[0],b=pick[1];var bd=badge(p),nm=L(p,"name");
   return '<a class="card" href="#piece-'+p.id+'"><div class="frame"><span class="nail" aria-hidden="true"></span>'+
@@ -421,7 +421,7 @@ function bindPLP(){
 
 function pagePiece(p){
   var img=p.images[0],nm=L(p,"name");
-  var tags=p.features.map(function(f){return '<span class="tag'+(f==="One of a kind"||f==="Made to order"?' key':'')+'">'+esc(t("feat."+f))+'</span>'}).join("");
+  var tags=p.features.filter(function(f){return f!=="One of a kind"}).map(function(f){return '<span class="tag'+(f==="One of a kind"||f==="Made to order"?' key':'')+'">'+esc(t("feat."+f))+'</span>'}).join("");
   var details='<ul>'+L(p,"details").map(function(d){return '<li>'+esc(d)+'</li>'}).join("")+'</ul>';
   var spec='<dl class="spec"><dt>'+t("spec.cat")+'</dt><dd>'+catName(p.cat)+'</dd>'+(p.size?'<dt>'+t("spec.size")+'</dt><dd>'+esc(p.size)+' '+t("hw")+'</dd>':'')+'<dt>'+t("spec.colour")+'</dt><dd>'+esc(p.colors.map(function(c){return t("col."+c)}).join(", "))+'</dd><dt>'+t("spec.made")+'</dt><dd>'+t("spec.place")+'</dd></dl>';
   var related=P.filter(function(q){return q.cat===p.cat&&q.id!==p.id}).sort(function(a,b){return b.order-a.order}).slice(0,4);
