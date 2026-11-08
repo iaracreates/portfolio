@@ -1,0 +1,37 @@
+# iaracreates
+
+> The website of Iara Lucena: a content designer and UX writer in the Netherlands, and maker of one-of-a-kind handmade bags in Blaricum. Available in English, Brazilian Portuguese (/pt-br/) and Dutch (/nl/).
+
+## About Iara Lucena
+
+- Content designer and UX writer with 10+ years of experience, at companies including Booking.com, Miro and Nebius.
+- Turns ideas, goals and requirements into clear words that guide users in a human, relevant way.
+- Based in the Netherlands for 17+ years. Works in Portuguese (native), English and Dutch.
+- Contact: iaracreates.info@gmail.com · LinkedIn: https://www.linkedin.com/in/iara-lucena-210485104 · Instagram: @iaracreates
+
+## Content design
+
+- [Content design overview](https://iaracreates.com/content-design/): role, approach and scope of work
+- [Case studies](https://iaracreates.com/content-design/projects/): eight projects across UX/UI, user journeys and content strategy
+  - [Content Design AI Buddy](https://iaracreates.com/content-design/projects/content-design-ai-buddy/): A hackathon proof of concept that became the design team’s daily content companion.
+  - [Order tracking journey](https://iaracreates.com/content-design/projects/order-tracking-journey/): End-to-end collaboration from discovery research to delivery.
+  - [Cancellation flow](https://iaracreates.com/content-design/projects/cancellation-flow/): Retention through transparency — a respectful, low-friction path.
+  - [Wallet & rewards at Booking.com](https://iaracreates.com/content-design/projects/booking-wallet-rewards/): Making a complex loyalty product feel easy to understand and trustworthy.
+  - [Agile planning tool beta launch](https://iaracreates.com/content-design/projects/agile-planning-tool-launch/): Leading UX writing for a brand-new product launch.
+  - [Website replatforming at Bugaboo](https://iaracreates.com/content-design/projects/bugaboo-website-replatforming/): Six months, one writer, an entire digital ecosystem.
+  - [Scaled content design library](https://iaracreates.com/content-design/projects/content-design-library/): A self-service library so product teams can write great UI copy on their own.
+  - [Translations workflow automation](https://iaracreates.com/content-design/projects/translations-workflow-automation/): Bridging engineering and localization over an 8-month project.
+- [Continuous learning](https://iaracreates.com/content-design/continuous-learning/): certificates on designing with and for AI (IDEO U, Interaction Design Foundation, Google Cloud, Maven)
+- [Public speaking](https://iaracreates.com/content-design/public-speaking/): talks, lectures and podcasts, including Figma Config 2022
+
+## Handmade
+
+- The handmade side is For the Love of Zelda, a collection by iaracreates, named after Iara's grandmother, Zélia.
+- [Handmade overview](https://iaracreates.com/handmade/): one-of-a-kind bags and accessories, sewn and crocheted by hand in Blaricum from bold fabrics, new and thrifted
+- [Bags](https://iaracreates.com/handmade/bags/) · [Crochet](https://iaracreates.com/handmade/crochet/) · [All pieces](https://iaracreates.com/handmade/all-pieces/)
+- Nothing is sold online. To ask about a piece, a custom bag, a market or a collaboration, email iaracreates.info@gmail.com.
+
+## More
+
+- [About](https://iaracreates.com/about/): Iara's story, languages and education
+- [Contact](https://iaracreates.com/contact/)

@@ -1,0 +1,32 @@
+{
+ "en": {
+  "f:about_title": "Hi there 👋🏻",
+  "t:ab.s1t": "A thread for the little hiccups",
+  "t:ab.s3t": "A web of creative expressions",
+  "t:ab.threadL": "My connection with my grandmother began with a thread, and this creative thread has changed shapes and forms throughout my life.",
+  "t:ab.threadT": "The thread",
+  "t:about.h1": "I'm iara, a content designer and maker",
+  "t:home.thread": "Creativity is the thread that runs through everything.",
+  "t:home.zeldaLede": "Everything I make is born from a love of maximalism, bold prints, joyful colour, and as little waste as possible along the way. Balancing things out on the other side, everything that I write is meant to be clear, simple, and concise."
+ },
+ "pt": {
+  "f:about_title": "Oi 👋🏻",
+  "t:ab.s1t": "Uma linha pros pequenos soluços",
+  "t:ab.s3t": "Uma teia de expressões criativas",
+  "t:ab.threadL": "A minha conexão com a minha vó começou com uma linha, e essa linha criativa mudou de forma ao longo da minha vida.",
+  "t:ab.threadT": "A linha",
+  "t:about.h1": "Eu sou a Iara, content designer e artesã",
+  "t:home.thread": "A criatividade é a linha que atravessa tudo.",
+  "t:home.zeldaLede": "Tudo o que eu faço nasce do amor pelo maximalismo, por estampas ousadas, cores alegres e o mínimo de desperdício possível no caminho. Pra equilibrar do outro lado, tudo o que eu escrevo tem que ser claro, simples e direto."
+ },
+ "nl": {
+  "f:about_title": "Hoi 👋🏻",
+  "t:ab.s1t": "Een draadje voor de kleine hikjes",
+  "t:ab.s3t": "Een web van creatieve uitingen",
+  "t:ab.threadL": "De band met mijn oma begon met een draad, en deze creatieve draad is in de loop van mijn leven steeds van vorm veranderd.",
+  "t:ab.threadT": "De draad",
+  "t:about.h1": "Ik ben Iara, content designer en maker",
+  "t:home.thread": "Creativiteit is de draad die overal doorheen loopt.",
+  "t:home.zeldaLede": "Alles wat ik maak komt voort uit liefde voor maximalisme, gedurfde prints, vrolijke kleuren en zo min mogelijk verspilling onderweg. Als tegenwicht moet alles wat ik schrijf juist duidelijk, eenvoudig en beknopt zijn."
+ }
+}
