@@ -678,12 +678,15 @@ body[data-side="handmade"] .sub-brand{display:flex}
 .landing-hero .inner{align-items:start;padding-top:24px}
 .landing-hero .collage{padding-top:44px}
 
-/* About: the montage spans the section, text follows */
-.maker{grid-template-columns:minmax(0,1fr);gap:40px;align-items:start}
+/* About: the montage beside the intro; languages, education and buttons span the full width below */
+.maker{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px 56px;align-items:center}
+.maker-more{grid-column:1/-1;align-items:flex-start}
+.maker>.stack:not(.maker-more)>.actions{margin-top:8px}
+.maker-more .facts{width:100%}
 .about-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 26px 44px -30px rgba(26,32,76,.45);background:#F4F3EF}
 .about-photo img{display:block;width:100%;height:auto}
-.maker>.stack{max-width:none}
-@media (max-width:860px){.maker{gap:28px}.about-photo{border-radius:12px}}
+@media (max-width:1080px){.maker{gap:32px 40px}}
+@media (max-width:860px){.maker{grid-template-columns:minmax(0,1fr);gap:28px}.about-photo{border-radius:12px}}
 /* tagline: the poetic line under each descriptive heading */
 .tagline{margin:-6px 0 0;font-family:var(--sans);font-weight:500;font-size:clamp(18px,2vw,22px);line-height:1.3;color:var(--indigo)}
 body[data-side="handmade"] .tagline,body[data-side="shared"] .tagline{font-family:var(--script);font-weight:400;font-size:clamp(30px,3.4vw,42px);line-height:1.1;color:var(--ink)}
@@ -1389,9 +1392,9 @@ function pageAbout(){
   collage([A("blue-patchwork-tote"),A("patchwork-strip-tote")],"two")+'</div></section>'+
   '<section class="sec band zone-design"><div class="inner maker">'+aboutPhoto()+'<div class="stack" style="gap:16px;align-items:flex-start;min-width:0"><p class="eyebrow">'+t("ab.maker")+'</p><h2 class="script" style="font-size:clamp(40px,5vw,60px)">'+esc(pf("about_title"))+'</h2>'+
   '<p>'+esc(pf("about_p1"))+'</p><p>'+esc(pf("about_p2"))+'</p><p class="lede">'+t("ab.makerP")+'</p>'+
-  '<div class="facts"><div class="fact"><p class="eyebrow">'+esc(pf("lang_title"))+'</p>'+langRow("pt",100)+langRow("en",95)+langRow("nl",80)+'</div>'+
-  '<div class="fact"><p class="eyebrow">'+esc(pf("edu_title"))+'</p><p><b>'+esc(pf("edu_degree"))+'</b></p><p class="muted">'+esc(pf("edu_valid"))+'</p><ul class="chips">'+[1,2,3].map(function(i){return '<li>'+esc(pf("edu_chip"+i))+'</li>'}).join("")+'</ul></div></div>'+
-  '<div class="actions"><a class="btn solid" href="'+CV_URL+'" target="_blank" rel="noopener">'+esc(pf("cv_btn"))+' '+ICON_EXT+SR_NEW()+'</a><a class="btn" href="#contact">'+t("ab.touch")+'</a></div></div></div></section>'+
+  '<div class="actions"><a class="btn solid" href="'+CV_URL+'" target="_blank" rel="noopener">'+esc(pf("cv_btn"))+' '+ICON_EXT+SR_NEW()+'</a><a class="btn" href="#contact">'+t("ab.touch")+'</a></div></div>'+
+  '<div class="maker-more stack" style="gap:24px"><div class="facts"><div class="fact"><p class="eyebrow">'+esc(pf("lang_title"))+'</p>'+langRow("pt",100)+langRow("en",95)+langRow("nl",80)+'</div>'+
+  '<div class="fact"><p class="eyebrow">'+esc(pf("edu_title"))+'</p><p><b>'+esc(pf("edu_degree"))+'</b></p><p class="muted">'+esc(pf("edu_valid"))+'</p><ul class="chips">'+[1,2,3].map(function(i){return '<li>'+esc(pf("edu_chip"+i))+'</li>'}).join("")+'</ul></div></div></div></div></section>'+
   '<section class="sec band"><div class="inner lines-grid"><div class="stack" style="gap:16px;max-width:58ch"><h2 class="h-section">'+t("ab.linesT")+'</h2><p class="lede">'+t("ab.linesP")+'</p></div>'+
   '<div class="duo"><a class="duo-item" href="#design"><p class="eyebrow red">'+t("nav.design")+'</p><p class="muted">'+t("d.ledeAdd")+'</p><span class="link">'+t("btn.design")+' →</span></a>'+
   '<a class="duo-item" href="#handmade"><p class="eyebrow red">'+t("nav.handmade")+'</p><p class="muted">'+t("home.handmadeL")+'</p><span class="link">'+t("btn.handmade")+' →</span></a></div></div></section>'+

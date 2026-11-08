@@ -630,9 +630,9 @@ function pageAbout(){
   collage([A("blue-patchwork-tote"),A("patchwork-strip-tote")],"two")+'</div></section>'+
   '<section class="sec band zone-design"><div class="inner maker">'+aboutPhoto()+'<div class="stack" style="gap:16px;align-items:flex-start;min-width:0"><p class="eyebrow">'+t("ab.maker")+'</p><h2 class="script" style="font-size:clamp(40px,5vw,60px)">'+esc(pf("about_title"))+'</h2>'+
   '<p>'+esc(pf("about_p1"))+'</p><p>'+esc(pf("about_p2"))+'</p><p class="lede">'+t("ab.makerP")+'</p>'+
-  '<div class="facts"><div class="fact"><p class="eyebrow">'+esc(pf("lang_title"))+'</p>'+langRow("pt",100)+langRow("en",95)+langRow("nl",80)+'</div>'+
-  '<div class="fact"><p class="eyebrow">'+esc(pf("edu_title"))+'</p><p><b>'+esc(pf("edu_degree"))+'</b></p><p class="muted">'+esc(pf("edu_valid"))+'</p><ul class="chips">'+[1,2,3].map(function(i){return '<li>'+esc(pf("edu_chip"+i))+'</li>'}).join("")+'</ul></div></div>'+
-  '<div class="actions"><a class="btn solid" href="'+CV_URL+'" target="_blank" rel="noopener">'+esc(pf("cv_btn"))+' '+ICON_EXT+SR_NEW()+'</a><a class="btn" href="#contact">'+t("ab.touch")+'</a></div></div></div></section>'+
+  '<div class="actions"><a class="btn solid" href="'+CV_URL+'" target="_blank" rel="noopener">'+esc(pf("cv_btn"))+' '+ICON_EXT+SR_NEW()+'</a><a class="btn" href="#contact">'+t("ab.touch")+'</a></div></div>'+
+  '<div class="maker-more stack" style="gap:24px"><div class="facts"><div class="fact"><p class="eyebrow">'+esc(pf("lang_title"))+'</p>'+langRow("pt",100)+langRow("en",95)+langRow("nl",80)+'</div>'+
+  '<div class="fact"><p class="eyebrow">'+esc(pf("edu_title"))+'</p><p><b>'+esc(pf("edu_degree"))+'</b></p><p class="muted">'+esc(pf("edu_valid"))+'</p><ul class="chips">'+[1,2,3].map(function(i){return '<li>'+esc(pf("edu_chip"+i))+'</li>'}).join("")+'</ul></div></div></div></div></section>'+
   '<section class="sec band"><div class="inner lines-grid"><div class="stack" style="gap:16px;max-width:58ch"><h2 class="h-section">'+t("ab.linesT")+'</h2><p class="lede">'+t("ab.linesP")+'</p></div>'+
   '<div class="duo"><a class="duo-item" href="#design"><p class="eyebrow red">'+t("nav.design")+'</p><p class="muted">'+t("d.ledeAdd")+'</p><span class="link">'+t("btn.design")+' →</span></a>'+
   '<a class="duo-item" href="#handmade"><p class="eyebrow red">'+t("nav.handmade")+'</p><p class="muted">'+t("home.handmadeL")+'</p><span class="link">'+t("btn.handmade")+' →</span></a></div></div></section>'+
