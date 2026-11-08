@@ -3,3 +3,13 @@
 /projects/ai-buddy/ /content-design/projects/content-design-ai-buddy/ 301
 /pt-br/projects/ai-buddy/ /pt-br/content-design/projects/content-design-ai-buddy/ 301
 /nl/projects/ai-buddy/ /nl/content-design/projects/content-design-ai-buddy/ 301
+# Handmade lives under the collection name for now (temporary: 302)
+/handmade /fortheloveofzelda/ 302
+/handmade/ /fortheloveofzelda/ 302
+/handmade/* /fortheloveofzelda/:splat 302
+/pt-br/handmade /pt-br/fortheloveofzelda/ 302
+/pt-br/handmade/ /pt-br/fortheloveofzelda/ 302
+/pt-br/handmade/* /pt-br/fortheloveofzelda/:splat 302
+/nl/handmade /nl/fortheloveofzelda/ 302
+/nl/handmade/ /nl/fortheloveofzelda/ 302
+/nl/handmade/* /nl/fortheloveofzelda/:splat 302

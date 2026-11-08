@@ -27,17 +27,20 @@ SITE_URL = "https://iaracreates.com"   # the site's public address (no trailing 
 # out of search engines ("noindex") and out of the sitemap, so the same bags don't compete in two places.
 # Set to False on switch-over day and run the build again.
 HIDE_HANDMADE_FROM_SEARCH = True
+# Address of the Handmade section. Until the official switch to iaracreates it lives under the collection name,
+# e.g. /fortheloveofzelda/bags/. In January 2027 change this to "handmade" and swap the redirects in write_extras().
+HANDMADE_SLUG = "fortheloveofzelda"
 # -----------------------------------------------------------------------------
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SEG = {"en": "", "pt": "pt-br", "nl": "nl"}
 HREFLANG = {"en": "en", "pt": "pt-BR", "nl": "nl"}
-GENERATED = ["index.html", "404.html", "pt-br", "nl", "content-design", "handmade", "about", "contact", "assets",
+GENERATED = ["index.html", "404.html", "pt-br", "nl", "content-design", "handmade", "fortheloveofzelda", "about", "contact", "assets",
              "sitemap.xml", "robots.txt", "llms.txt", "_redirects"]
 STATIC = {"home": "", "design": "content-design", "projects": "content-design/projects",
           "learning": "content-design/continuous-learning", "speaking": "content-design/public-speaking",
-          "handmade": "handmade", "bags": "handmade/bags", "crochet": "handmade/crochet",
-          "collection": "handmade/all-pieces", "about": "about", "contact": "contact"}
+          "handmade": "{hm}", "bags": "{hm}/bags", "crochet": "{hm}/crochet",
+          "collection": "{hm}/all-pieces", "about": "about", "contact": "contact"}
 PSLUG = {"buddy": "content-design-ai-buddy", "order": "order-tracking-journey", "cancel": "cancellation-flow",
          "wallet": "booking-wallet-rewards", "agile": "agile-planning-tool-launch",
          "bugaboo": "bugaboo-website-replatforming", "library": "content-design-library",
@@ -60,14 +63,14 @@ def read_app():
 
 
 def page_list(pieces):
-    pages = [(k, p) for k, p in STATIC.items()]
+    pages = [(k, p.replace("{hm}", HANDMADE_SLUG)) for k, p in STATIC.items()]
     pages += [("project", "content-design/projects/" + s) for s in PSLUG.values()]
-    pages += [("piece", "handmade/%s/%s" % ({"bags": "bags", "crochet": "crochet"}.get(p["cat"], p["cat"]), p["id"])) for p in pieces]
+    pages += [("piece", "%s/%s/%s" % (HANDMADE_SLUG, p["cat"], p["id"])) for p in pieces]
     return pages
 
 
 def is_handmade(path):
-    return path.startswith("handmade")
+    return path.split("/")[0] == HANDMADE_SLUG
 
 
 def clean():
@@ -126,7 +129,7 @@ def main():
     from playwright.sync_api import sync_playwright
     src, pieces = read_app()
     edits = json.load(open(os.path.join(ROOT, "copy-edits.json"), encoding="utf8")) if os.path.exists(os.path.join(ROOT, "copy-edits.json")) else {}
-    site = {"base": SITE_URL, "hideHandmade": HIDE_HANDMADE_FROM_SEARCH, "copy": {l: edits.get(l, {}) for l in SEG}}
+    site = {"base": SITE_URL, "hideHandmade": HIDE_HANDMADE_FROM_SEARCH, "handmadeSlug": HANDMADE_SLUG, "copy": {l: edits.get(l, {}) for l in SEG}}
     inject = '<base href="/"><script>window.__SITE__=' + json.dumps(site, ensure_ascii=False).replace("</", "<\\/") + ';</script>'
     app = src.replace('var BASE="https://iaracreates.com";', 'var BASE=' + json.dumps(SITE_URL) + ';', 1)
     app = app.replace("<meta charset=utf8>", "<meta charset=utf8>" + inject, 1) if "<meta charset=utf8>" in app else inject + app
@@ -186,8 +189,12 @@ def write_extras(pages):
         "/pt/* /pt-br/:splat 301\n"
         "/projects/ai-buddy/ /content-design/projects/content-design-ai-buddy/ 301\n"
         "/pt-br/projects/ai-buddy/ /pt-br/content-design/projects/content-design-ai-buddy/ 301\n"
-        "/nl/projects/ai-buddy/ /nl/content-design/projects/content-design-ai-buddy/ 301\n")
-    llms = open(os.path.join(ROOT, "src", "llms.txt"), encoding="utf8").read().replace("https://iaracreates.com", SITE_URL)
+        "/nl/projects/ai-buddy/ /nl/content-design/projects/content-design-ai-buddy/ 301\n" +
+        ("" if HANDMADE_SLUG == "handmade" else
+         "# Handmade lives under the collection name for now (temporary: 302)\n" +
+         "".join("{p}handmade {p}{s}/ 302\n{p}handmade/ {p}{s}/ 302\n{p}handmade/* {p}{s}/:splat 302\n".format(p=pre, s=HANDMADE_SLUG)
+                 for pre in ("/", "/pt-br/", "/nl/"))))
+    llms = open(os.path.join(ROOT, "src", "llms.txt"), encoding="utf8").read().replace("https://iaracreates.com", SITE_URL).replace("/handmade/", "/" + HANDMADE_SLUG + "/")
     if HIDE_HANDMADE_FROM_SEARCH:
         llms = re.sub(r"\n## Handmade\n.*?(?=\n## )", "\n## Handmade\n\n- One-of-a-kind handmade bags by Iara Lucena (For the Love of Zelda, a collection by iaracreates). This part of the site opens in January 2027.\n", llms, flags=re.S)
     open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf8").write(llms)

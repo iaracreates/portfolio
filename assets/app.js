@@ -688,13 +688,15 @@ document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function
 
 /* ---------- Readable page addresses, per language (prototype of the planned real URLs) ---------- */
 var BASE="https://iaracreates.com";
-var PATH={home:"",design:"content-design",projects:"content-design/projects",learning:"content-design/continuous-learning",speaking:"content-design/public-speaking",handmade:"handmade",bags:"handmade/bags",crochet:"handmade/crochet",prints:"handmade/3d-prints",collection:"handmade/all-pieces",about:"about",contact:"contact"};
+/* The Handmade section lives under the collection name until the switch-over (January 2027: "handmade") */
+var HM=(window.__SITE__&&window.__SITE__.handmadeSlug)||"fortheloveofzelda";
+var PATH={home:"",design:"content-design",projects:"content-design/projects",learning:"content-design/continuous-learning",speaking:"content-design/public-speaking",handmade:HM,bags:HM+"/bags",crochet:HM+"/crochet",prints:HM+"/3d-prints",collection:HM+"/all-pieces",about:"about",contact:"contact"};
 var PSLUG={buddy:"content-design-ai-buddy",order:"order-tracking-journey",cancel:"cancellation-flow",wallet:"booking-wallet-rewards",agile:"agile-planning-tool-launch",bugaboo:"bugaboo-website-replatforming",library:"content-design-library",l10n:"translations-workflow-automation"};
 var PSLUG_R={};Object.keys(PSLUG).forEach(function(k){PSLUG_R[PSLUG[k]]=k});
 var PATH_R={};Object.keys(PATH).forEach(function(k){if(k!=="projects"||true)PATH_R[PATH[k]]=k});
 var CUR={key:"home",id:null};
 function pathOf(key,id){
-  if(key==="piece"){var q=byId[id];return q?"handmade/"+PATH[q.cat].split("/")[1]+"/"+id:""}
+  if(key==="piece"){var q=byId[id];return q?PATH[q.cat]+"/"+id:""}
   if(key==="project")return "content-design/projects/"+(PSLUG[id]||id);
   return PATH[key]!=null?PATH[key]:"";
 }
@@ -712,9 +714,10 @@ function parseHash(hash){
   }
   var seg=v.split("/").filter(Boolean),lang="en";
   if(seg.length&&SEG_R[seg[0]])lang=SEG_R[seg.shift()];
+  if(seg.length&&(seg[0]==="handmade"||seg[0]==="fortheloveofzelda"))seg[0]=HM;
   var p=seg.join("/");
   if(PATH_R[p]!=null)return {lang:lang,key:PATH_R[p],id:null};
-  if(seg.length===3&&seg[0]==="handmade"&&byId[seg[2]])return {lang:lang,key:"piece",id:seg[2]};
+  if(seg.length===3&&seg[0]===HM&&byId[seg[2]])return {lang:lang,key:"piece",id:seg[2]};
   if(seg.length===3&&seg[0]==="content-design"&&seg[1]==="projects"&&PSLUG_R[seg[2]])return {lang:lang,key:"project",id:PSLUG_R[seg[2]]};
   return {lang:lang,key:PROD?"notfound":"home",id:null,unknown:true};
 }
