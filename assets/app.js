@@ -704,7 +704,6 @@ function H(key,id,lang){lang=lang||LANG;var p=pathOf(key,id),sg=SEG[lang];
 function canon(key,id,lang){lang=lang||LANG;var p=pathOf(key,id),sg=SEG[lang];return BASE+"/"+(sg?sg+"/":"")+(p?p+"/":"")}
 function parseHash(hash){
   var v=(hash||"").replace(/^#/,"");
-  if(PROD){v=location.pathname.replace(/\/+$/,"")||"/";if(v==="/")return {lang:"en",key:"home",id:null}}
   if(v===""||v==="/")return {lang:null,key:"home",id:null,empty:v===""};
   if(v.charAt(0)!=="/"){ /* old short links: #bags, #piece-x */
     if(v.indexOf("piece-")===0&&byId[v.slice(6)])return {lang:null,key:"piece",id:v.slice(6),legacy:true};
@@ -944,7 +943,7 @@ var PAGES={notfound:pageNotFound,home:pageHome,handmade:pageHandmade,bags:pageBa
 var GROUP={handmade:"handmade",bags:"handmade",crochet:"handmade",prints:"handmade",collection:"handmade",design:"design",projects:"design",learning:"design",speaking:"design"};
 var TKEY={home:null,handmade:"nav.handmade",design:"nav.design",projects:"nav.projects",learning:"nav.learning",speaking:"nav.speaking",bags:"nav.bags",crochet:"nav.crochet",prints:"nav.prints",collection:"nav.collection",about:"nav.about",contact:"nav.contact"};
 function route(keepScroll){
-  var r=parseHash(location.hash);
+  var r=parseHash(PROD?"#"+location.pathname:location.hash);
   if(r.lang&&r.lang!==LANG){LANG=r.lang;try{localStorage.setItem("iarac-proto-lang",LANG)}catch(e){}applyStatic()}
   var key=r.key,id=r.id;
   if(key==="prints"&&!SHOW.prints)key=PROD?"notfound":"home";
