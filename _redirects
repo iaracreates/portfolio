@@ -1,0 +1,5 @@
+# Older addresses keep working
+/pt/* /pt-br/:splat 301
+/projects/ai-buddy/ /content-design/projects/content-design-ai-buddy/ 301
+/pt-br/projects/ai-buddy/ /pt-br/content-design/projects/content-design-ai-buddy/ 301
+/nl/projects/ai-buddy/ /nl/content-design/projects/content-design-ai-buddy/ 301
