@@ -163,6 +163,16 @@ def main():
     os.makedirs(os.path.join(ROOT, "assets"), exist_ok=True)
     open(os.path.join(ROOT, "assets", "app.css"), "w", encoding="utf8").write(assets[0])
     open(os.path.join(ROOT, "assets", "app.js"), "w", encoding="utf8").write(assets[1])
+    # Version the shared files by their content, so a browser never pairs a new page with an old cached script
+    import hashlib
+    ver = hashlib.sha256((assets[0] + assets[1]).encode("utf8")).hexdigest()[:10]
+    for key, address in [("notfound", None)] + [(None, a) for a in written]:
+        target = os.path.join(ROOT, "404.html") if key == "notfound" else os.path.join(ROOT, address.strip("/"), "index.html")
+        if not os.path.exists(target):
+            continue
+        html = open(target, encoding="utf8").read()
+        html = html.replace('src="/assets/app.js"', 'src="/assets/app.js?v=%s"' % ver).replace('href="/assets/app.css"', 'href="/assets/app.css?v=%s"' % ver)
+        open(target, "w", encoding="utf8").write(html)
     write_extras(pages)
     print("Built %d pages (%d addresses in 3 languages + 404)." % (len(written), len(pages)))
 
