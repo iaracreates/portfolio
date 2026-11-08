@@ -478,7 +478,7 @@ dialog.pdrawer[open]{display:flex;flex-direction:column;animation:pdIn .45s cubi
 :root{
   --ink:#1A204C; --indigo:#404A95; --peri:#8B92C1; --lav:#DBD6F0; --lav-wall:#F5F4FB;
   --carmine:#D7263D; --carmine-text:#B51D32; --carmine-hl:#FADADF; --carmine-hl-text:#A31A2E;
-  --paper-wall:#F4F3F0;
+  --paper-wall:#FFFFFF;
   --wall:#FBFBFD; --surface:#FFFFFF; --paper:#FFFFFF; --frame:#FFFFFF; --mat:#F4F4F1;
   --muted:#4F5478; --on-frame:#4B5060; --rule:#E4E3EC; --shadow:rgba(26,32,76,.18);
   --red:var(--indigo); --red-text:var(--indigo);
@@ -673,6 +673,8 @@ body[data-side="handmade"] .sub-brand{display:flex}
 .about-photo img{display:block;width:100%;height:auto}
 @media (max-width:1080px){.maker{gap:32px 40px}}
 @media (max-width:860px){.maker{grid-template-columns:minmax(0,1fr);gap:28px}.about-photo{border-radius:12px}}
+/* category tiles on phones: the count sits under the name */
+@media (max-width:520px){.tile .t{flex-direction:column;align-items:flex-start;gap:2px}.tile .t b{font-size:13px;letter-spacing:.18em}}
 /* tagline: the poetic line under each descriptive heading */
 .tagline{margin:-6px 0 0;font-family:var(--sans);font-weight:500;font-size:clamp(18px,2vw,22px);line-height:1.3;color:var(--indigo)}
 body[data-side="handmade"] .tagline,body[data-side="shared"] .tagline{font-family:var(--script);font-weight:400;font-size:clamp(30px,3.4vw,42px);line-height:1.1;color:var(--ink)}
