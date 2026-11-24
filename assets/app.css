@@ -653,6 +653,19 @@ body[data-side="handmade"] .sub-brand{display:flex}
 .foot-zl{height:30px;margin:0 0 12px}
 .sub-sign-sm{margin-bottom:6px}.sub-sign-sm .zl{height:34px}
 .landing-hero .sub-sign .zl{height:46px}
+/* the collection name is the landing headline */
+.zl-h1{margin:2px 0 0;line-height:0}
+.zl-h1 .zl{height:clamp(92px,11vw,148px)}
+.hm-sub{margin:0;font-size:clamp(34px,4vw,50px);line-height:1.05;color:var(--ink)}
+/* collection sign-off at the end of every handmade page */
+.z-end{border-top:1px solid var(--rule)}
+.z-end-in{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
+.z-end .zl{height:clamp(64px,8vw,96px);align-self:center}
+.z-end-by{margin:0;font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.z-end-t{margin:18px 0 0;font-size:clamp(36px,4.2vw,50px);line-height:1.1}
+.z-end .lede{max-width:52ch;margin:0 auto}
+.z-end .actions{justify-content:center;margin-top:10px}
+.z-end .btn svg{width:16px;height:16px;margin-right:8px;vertical-align:-3px}
 @media (max-width:860px){.sub-brand img{height:28px}.brand-lockup{gap:10px}.sub-brand{padding-left:10px}}
 
 /* quiet note under a section intro (from the live portfolio) */
@@ -671,6 +684,22 @@ body[data-side="handmade"] .sub-brand{display:flex}
 .maker-more .facts{width:100%}
 .about-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--rule);box-shadow:0 26px 44px -30px rgba(26,32,76,.45);background:#F4F3EF}
 .about-photo img{display:block;width:100%;height:auto}
+.about-photo.car{position:relative;background:#F4F3EF}
+.car-stage{position:relative;aspect-ratio:1/1}
+.car-slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 1.2s ease}
+.car-slide.on{opacity:1}
+.car-slide img{width:100%;height:100%;object-fit:contain}
+.car-ctrl{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;align-items:center;gap:6px}
+.car-dot{width:24px;height:24px;border:0;padding:0;background:none;cursor:pointer;display:grid;place-items:center}
+.car-dot::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ink);opacity:.25;transition:opacity .3s,transform .3s}
+.car-dot[aria-pressed="true"]::before{opacity:1;background:var(--carmine,#D7263D);transform:scale(1.15)}
+.car-arrow{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:1px solid var(--rule);background:rgba(255,255,255,.9);cursor:pointer;display:grid;place-items:center;padding:0;box-shadow:0 6px 14px -8px rgba(26,32,76,.35);transition:background .2s}
+.car-arrow:hover{background:#fff}
+.car-prev{left:12px}.car-next{right:12px}
+.car-arrow span{width:10px;height:10px;border-top:2px solid var(--ink);border-left:2px solid var(--ink)}
+.car-prev span{transform:translateX(2px) rotate(-45deg)}.car-next span{transform:translateX(-2px) rotate(135deg)}
+.car-dot:focus-visible,.car-arrow:focus-visible{outline:2px solid var(--carmine,#D7263D);outline-offset:2px;border-radius:50%}
+@media (prefers-reduced-motion:reduce){.car-slide{transition:none}}
 @media (max-width:1080px){.maker{gap:32px 40px}}
 @media (max-width:860px){.maker{grid-template-columns:minmax(0,1fr);gap:28px}.about-photo{border-radius:12px}}
 /* category tiles on phones: the count sits under the name */
