@@ -657,6 +657,23 @@ body[data-side="handmade"] .sub-brand{display:flex}
 .zl-h1{margin:2px 0 0;line-height:0}
 .zl-h1 .zl{height:clamp(92px,11vw,148px)}
 .hm-sub{margin:0;font-size:clamp(34px,4vw,50px);line-height:1.05;color:var(--ink)}
+/* temporary event banner: The Maker Market's own badge, styles copied verbatim from
+   themakermarket.nl/assets/kerst-2026/badge/badge.css (their two fonts load through a Google Fonts link in the head) */
+a.tmm-kerst{position:relative;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;align-items:center;column-gap:24px;row-gap:0;box-sizing:border-box;margin-top:64px;padding:22px 28px 22px 30%;min-height:156px;background:#141744;color:#FAF5EE;border:2px solid #1A1410;border-radius:20px;text-decoration:none;font-family:'Onest',system-ui,sans-serif;line-height:1.4;transition:transform .2s;}
+a.tmm-kerst:hover{transform:translateY(-2px);color:#FAF5EE;text-decoration:none;}
+a.tmm-kerst>img{position:absolute;left:4%;bottom:0;width:24%;max-width:150px;height:auto;margin:0;border:0;pointer-events:none;}
+a.tmm-kerst>b{display:block;grid-column:1;align-self:end;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-variation-settings:"wdth" 80;font-size:clamp(20px,3vw,34px);line-height:1.02;letter-spacing:-.03em;color:#FAF5EE;text-wrap:balance;}
+a.tmm-kerst>i{display:block;grid-column:1;align-self:start;font-style:normal;font-size:clamp(13px,1.5vw,16px);color:rgba(250,245,238,.8);margin-top:8px;}
+a.tmm-kerst>span{grid-column:2;grid-row:1/3;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-variation-settings:"wdth" 90;font-size:15px;color:#FAF5EE;background:#D0475C;border:2px solid #1A1410;border-radius:999px;padding:12px 22px;white-space:nowrap;transition:transform .2s;}
+a.tmm-kerst:hover>span{transform:translateX(3px);}
+@media (max-width:600px){
+  a.tmm-kerst{grid-template-columns:1fr;padding:16px 18px 16px 34%;}
+  a.tmm-kerst>span{grid-column:1;grid-row:auto;}
+  a.tmm-kerst>img{width:27%;}
+  a.tmm-kerst>span{justify-self:start;margin-top:12px;padding:0 0 2px;background:none;border:0;border-bottom:2px solid #D0475C;border-radius:0;font-size:14px;}
+}
+.ev-sec{padding-block:24px}
+.ev-sec a.tmm-kerst{margin-top:0}
 /* collection sign-off at the end of every handmade page */
 .z-end{border-top:1px solid var(--rule)}
 .z-end-in{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
