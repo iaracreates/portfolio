@@ -673,6 +673,8 @@ a.tmm-kerst:hover>span{transform:translateX(3px);}
   a.tmm-kerst>span{justify-self:start;margin-top:12px;padding:0 0 2px;background:none;border:0;border-bottom:2px solid #D0475C;border-radius:0;font-size:14px;}
 }
 .ev-sec{padding-block:24px}
+.hero-festive{margin:0;justify-self:center;width:100%;max-width:520px}
+.hero-festive img{display:block;width:100%;height:auto}
 .ev-sec a.tmm-kerst{margin-top:0}
 /* collection sign-off at the end of every handmade page */
 .z-end{border-top:1px solid var(--rule)}
